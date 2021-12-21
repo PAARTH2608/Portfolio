@@ -18,6 +18,7 @@
     justify-content: space-around;
     cursor: pointer;
     padding: 1%;
+    color: rgb(107, 103, 103);
 }
 .home:hover, .about:hover,
 .projects:hover, .socials:hover{
@@ -26,6 +27,7 @@
     background-color: rgba(255, 255, 255, 0.81);
     border-radius: 5px;
     border: 1px solid rgba(209, 213, 219, 0.3);
+    color: black;
 }
 
 .name{

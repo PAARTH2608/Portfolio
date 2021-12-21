@@ -3,9 +3,12 @@ import classes from "../../styles/About.module.css";
 import Navigation from "../../components/global/NavigationBar";
 import TwitterIcon from "@material-ui/icons/Twitter";
 import SchoolIcon from "@material-ui/icons/School";
-import { FaRobot } from "react-icons/fa";
+import Robot from "../../components/global/Robot";
 
 const About = () => {
+  const content =
+    "Hey there! Rigel this side. I am there to help you. For any queries click me to open chat page. I'll help my best to solve it.";
+
   return (
     <div className={classes.mainDiv}>
       <Navigation />
@@ -21,7 +24,7 @@ const About = () => {
           </div>
           <div className={classes.smallDesc}>
             <h1>PAARTH JAIN</h1>
-            <p>Software Developer || MACHINE LEARNING</p>
+            <p>Software Developer || Machine Learning</p>
             <div className={classes.links}>
               <div className={classes.link}>
                 <SchoolIcon style={{ color: "grey" }} />
@@ -43,9 +46,7 @@ const About = () => {
           <p></p>
         </div>
       </div>
-      <div className={classes.robot}>
-            <FaRobot />
-          </div>
+      <Robot content={content} />
     </div>
   );
 };

@@ -44,35 +44,26 @@
   font-size: 1.1rem;
 }
 .homeButton button:hover {
-    background-color: transparent;
-    transform: scale(1.1);
-    border: 3px solid rgb(238, 240, 241);
-    color: white;
-}
-
-.robot{
-  position: absolute;
-  bottom: 30px;
-  right: 30px;
-  font-size: 3rem;
+  background-color: transparent;
+  transform: scale(1.1);
+  border: 3px solid rgb(238, 240, 241);
   color: white;
 }
-.robot:hover{
-  transform: scale(1.1);
-  transition: all 0.2s ease-in-out;
-}
 
-.dialogue{
-  font-size: 1.1rem;
+.arrow{
   position: absolute;
-  bottom: 90px;
-  right: 60px;
-  backdrop-filter: blur(7px) saturate(200%);
-  -webkit-backdrop-filter: blur(7px) saturate(200%);
-  background-color: rgba(255, 255, 255, 0.71);
-  border-radius: 5px;
-  border: 1px solid rgba(209, 213, 219, 0.3);
-  height: 15vh;
-  width: 30vw;
-  padding: 0.7%;
+  top: 40px;
+  left: 40px;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.4);
+  padding: 1%;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease-in;
+}
+.arrow:hover{
+  color: rgba(14, 13, 13, 0.4);
+  background-color: white;
 }

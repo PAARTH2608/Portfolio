@@ -90,11 +90,3 @@
 .part2{
   background-color: black;
 }
-
-.robot{
-  position: absolute;
-  bottom: 30px;
-  right: 30px;
-  font-size: 3rem;
-  color: rgb(243, 129, 179);
-}
