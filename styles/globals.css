@@ -14,3 +14,15 @@ a {
 * {
   box-sizing: border-box;
 }
+
+/* custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(235, 88, 144);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-corner {
+  background-color: transparent;
+}

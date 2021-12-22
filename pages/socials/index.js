@@ -1,9 +1,10 @@
-import React from 'react'
+import Navigation from "../../components/global/NavigationBar";
+import classes from "../../styles/Socials.module.css";
 
 const Socials = () => {
     return (
-        <div>
-            social
+        <div className={classes.mainDiv}>
+            <Navigation />
         </div>
     )
 }
