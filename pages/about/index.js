@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Image from "next/image";
 import classes from "../../styles/About.module.css";
 import Navigation from "../../components/global/NavigationBar";
@@ -26,14 +27,18 @@ const About = () => {
             <h1>PAARTH JAIN</h1>
             <p>Software Developer || Machine Learning</p>
             <div className={classes.links}>
-              <div className={classes.link}>
-                <SchoolIcon style={{ color: "grey" }} />
-                <h2>VIT Vellore</h2>
-              </div>
-              <div className={classes.link}>
-                <TwitterIcon style={{ color: "#1DA1F2" }} />
-                <h2>@PAARTHJAIN7</h2>
-              </div>
+              <Link href='https://vit.ac.in/' passHref>
+                <a className={classes.link} target="_blank">
+                  <SchoolIcon style={{ color: "grey" }} />
+                  <h2>VIT Vellore</h2>
+                </a>
+              </Link>
+              <Link href='https://twitter.com/PAARTHJAIN7' passHref>
+                <a className={classes.link} target="_blank">
+                  <TwitterIcon style={{ color: "grey" }} />
+                  <h2>@PAARTHJAIN7</h2>
+                </a>
+              </Link>
             </div>
             <div className={classes.orgns}>
               <h3>Organisations</h3>

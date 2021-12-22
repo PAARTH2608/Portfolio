@@ -66,6 +66,12 @@
   align-items: center;
   font-size: 0.7rem;
 }
+.link h2:hover{
+  cursor: pointer;
+  /* color: rgb(231, 124, 165); */
+  text-decoration: underline;
+  color: gray;
+}
 .links{
   margin: 10px 0 10px 0;
 }
