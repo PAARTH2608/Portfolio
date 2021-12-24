@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { FaRobot } from "react-icons/fa";
-import classes from './Robot.module.css'
+import KeyboardVoiceIcon from '@material-ui/icons/KeyboardVoice';
+import classes from './Mic.module.css'
 
-const Robot = (props) => {
+const Mic = (props) => {
   const [hover, setHover] = useState(false);
 
   const onHover = () => {
@@ -15,15 +15,15 @@ const Robot = (props) => {
   return (
     <>
       <div
-        className={classes.robot}
+        className={classes.mic}
         onMouseEnter={onHover}
         onMouseLeave={onLeave}
       >
-        <FaRobot />
+        <KeyboardVoiceIcon />
       </div>
       {hover && <div className={classes.dialogue}>{props.content}</div>}
     </>
   );
 };
 
-export default Robot;
+export default Mic;

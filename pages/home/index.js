@@ -5,15 +5,16 @@ import Spinner from "../../components/home/spinner";
 import { useRouter } from "next/router";
 import Robot from "../../components/global/Robot";
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
+import Mic from "../../components/global/Mic";
+import { useSelector } from 'react-redux';
 
 const Home = () => {
   const [hover, setHover] = useState(false);
+  const voiceFac = useSelector(state => state.voice.voiceFac);
 
-  const content =
-    "Hey there! Rigel this side. I am there to help you. For any queries click me to open chat page. I'll help my best to solve it.";
+  const contentOne = "Hey there! Rigel this side. I am there to help you. For any queries click me to open chat page. I'll help my best to solve it.";
+  const contentTwo = "Voice command is activated. You can now click on the icon and start speaking the commands mentioned."
 
-  const router = useRouter();
-  console.log(router.pathname);
   return (
     <div className={classes.mainDiv}>
       <Link href='/' passHref>
@@ -33,7 +34,8 @@ const Home = () => {
             <button>EXPLORE</button>
           </Link>
           {/* <Spinner /> */}
-          <Robot content={content} />
+          <Robot content={contentOne} />
+          {voiceFac && <Mic content={contentTwo} />}
         </div>
       </div>
     </div>
