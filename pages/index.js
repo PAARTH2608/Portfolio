@@ -8,15 +8,9 @@ import { voiceActions } from "../store/voice-slice";
 
 export default function Start() {
   const [voice, setVoice] = useState(false);
-  const voiceHandler = () => {
-    setVoice(true);
-  }
-  const noVoiceHandler = () => {
-    setVoice(false);
-  }
 
   const dispatch = useDispatch();
-  dispatch(voiceActions.updateVoiceCommand(voice))
+  dispatch(voiceActions.updateVoiceCommand(voice));
 
   return (
     <div className={classes.start}>

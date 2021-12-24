@@ -1,40 +1,44 @@
 .navbar {
-    backdrop-filter: blur(7px) saturate(200%);
-    -webkit-backdrop-filter: blur(7px) saturate(200%);
-    background-color: rgba(255, 255, 255, 0.71);
-    border-radius: 5px;
-    border: 1px solid rgba(209, 213, 219, 0.3);
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 7vh;
-    width: 40%;
+  backdrop-filter: blur(7px) saturate(200%);
+  -webkit-backdrop-filter: blur(7px) saturate(200%);
+  background-color: rgba(255, 255, 255, 0.71);
+  border-radius: 5px;
+  border: 1px solid rgba(209, 213, 219, 0.3);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 7vh;
+  width: 40%;
 }
 
-.home, .about,
-.projects, .socials{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    cursor: pointer;
-    padding: 1%;
-    color: rgb(107, 103, 103);
+.home,
+.about,
+.projects,
+.socials {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  cursor: pointer;
+  padding: 1.7%;
+  color: rgb(107, 103, 103);
 }
-.home:hover, .about:hover,
-.projects:hover, .socials:hover{
-    backdrop-filter: blur(7px) saturate(200%);
-    -webkit-backdrop-filter: blur(7px) saturate(200%);
-    background-color: rgba(255, 255, 255, 0.81);
-    border-radius: 5px;
-    border: 1px solid rgba(209, 213, 219, 0.3);
-    color: black;
+.home:hover,
+.about:hover,
+.projects:hover,
+.socials:hover {
+  backdrop-filter: blur(7px) saturate(200%);
+  -webkit-backdrop-filter: blur(7px) saturate(200%);
+  background-color: rgba(255, 255, 255, 0.81);
+  border-radius: 5px;
+  border: 1px solid rgba(209, 213, 219, 0.3);
+  color: black;
 }
 
-.name{
-    font-size: 1.1rem;
-    font-weight: 500;
+.name {
+  font-size: 1.1rem;
+  font-weight: 500;
 }
 
-.icon{
-    padding-right: 8%;
+.icon {
+  padding-right: 8%;
 }

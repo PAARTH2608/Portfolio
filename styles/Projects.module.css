@@ -48,7 +48,6 @@
   margin: 0;
 }
 .projectContainer {
-  /* height: 80vh; */
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -60,4 +59,38 @@
   width: 31.2%;
   background-color: black;
   margin: 1%;
+}
+
+.input{
+  padding: 0.5%;
+  margin: 0.5%;
+  background: transparent;
+  border-radius: 20px;
+  border: 1px solid transparent;
+  border-bottom: 2px solid rgb(228, 127, 171);
+  font-size: 1rem;
+  outline: none;
+}
+.input:focus{
+  transform: scale(1.1);
+}
+
+.buttons{
+  width: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.buttons button{
+  padding: 3% 5%;
+  background-color: rgb(248, 121, 176);
+  margin-left: 5%;
+  border-radius: 20px;
+  border: 1px solid transparent;
+  color: white;
+  cursor: pointer;
+}
+.buttons button:hover{
+  color: rgb(248, 121, 176);
+  background-color: white;
 }
