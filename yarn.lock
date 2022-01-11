@@ -866,6 +866,11 @@ core-js-pure@^3.19.0:
   resolved "https://registry.yarnpkg.com/core-js-pure/-/core-js-pure-3.20.0.tgz#7253feccf8bb05b72c153ddccdbe391ddbffbe03"
   integrity sha512-qsrbIwWSEEYOM7z616jAVgwhuDDtPLwZSpUsU3vyUkHYqKTf/uwOJBZg2V7lMurYWkpVlaVOxBrfX0Q3ppvjfg==
 
+core-js@^3.20.2:
+  version "3.20.2"
+  resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.20.2.tgz#46468d8601eafc8b266bd2dd6bf9dee622779581"
+  integrity sha512-nuqhq11DcOAbFBV4zCbKeGbKQsUDRqTX0oqx7AttUBuqe3h20ixsE039QHelbL6P4h+9kytVqyEtyZ6gsiwEYw==
+
 create-ecdh@^4.0.0:
   version "4.0.4"
   resolved "https://registry.yarnpkg.com/create-ecdh/-/create-ecdh-4.0.4.tgz#d6e7f4bffa66736085a0762fd3a632684dabcc4e"
@@ -2654,6 +2659,11 @@ react-refresh@0.8.3:
   resolved "https://registry.yarnpkg.com/react-refresh/-/react-refresh-0.8.3.tgz#721d4657672d400c5e3c75d063c4a85fb2d5d68f"
   integrity sha512-X8jZHc7nCMjaCqoU+V2I0cOhNW+QMBwSUkeXnTi8IPe6zaRWfn60ZzvFDZqWPfmSJfjub7dDW1SP0jaHWLu/hg==
 
+react-speech-recognition@^3.4.0:
+  version "3.9.0"
+  resolved "https://registry.yarnpkg.com/react-speech-recognition/-/react-speech-recognition-3.9.0.tgz#9e186f7a9e984e9af4638b5b875c5d5bdb616f6d"
+  integrity sha512-K42atEDi6P6cIuDnqDG0guzKeLaPlxKjZebhoLbgaJAflzhikrUSQnncCDBE3KXSPk7ASfBoykz+uqp8sB8VFQ==
+
 react-transition-group@^4.4.0:
   version "4.4.2"
   resolved "https://registry.yarnpkg.com/react-transition-group/-/react-transition-group-4.4.2.tgz#8b59a56f09ced7b55cbd53c36768b922890d5470"
@@ -2705,7 +2715,7 @@ regenerator-runtime@0.13.4:
   resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.13.4.tgz#e96bf612a3362d12bb69f7e8f74ffeab25c7ac91"
   integrity sha512-plpwicqEzfEyTQohIKktWigcLzmNStMGwbOUbykx51/29Z3JOGYldaaNGK7ngNXV+UcoqvIMmloZ48Sr74sd+g==
 
-regenerator-runtime@^0.13.4:
+regenerator-runtime@^0.13.4, regenerator-runtime@^0.13.9:
   version "0.13.9"
   resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.13.9.tgz#8925742a98ffd90814988d7566ad30ca3b263b52"
   integrity sha512-p3VT+cOEgxFsRRA9X4lkI1E+k2/CtnKtU4gcxyaCUreilL/vqI6CdZ3wxVUx3UOUg+gnUOQQcRI7BmSI656MYA==
