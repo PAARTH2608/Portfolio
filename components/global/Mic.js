@@ -3,7 +3,7 @@ import Link from "next/link";
 import KeyboardVoiceIcon from "@material-ui/icons/KeyboardVoice";
 import classes from "./Mic.module.css";
 import { useRouter } from "next/router";
-import SpeechRecognition from "react-speech-recognition";
+import SpeechRecognition, { useSpeechRecognition } from "react-speech-recognition";
 
 const Mic = (props) => {
   const [hover, setHover] = useState(false);
@@ -23,6 +23,7 @@ const Mic = (props) => {
     },
   ];
 
+  const { transcript } = useSpeechRecognition({ commands });
   const [redirectUrl, setRedirectUrl] = useState("");
   const pages = ["home", "about", "projects", "socials"];
   const urls = {
