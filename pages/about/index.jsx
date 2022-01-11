@@ -7,6 +7,21 @@ import SchoolIcon from "@material-ui/icons/School";
 import Robot from "../../components/global/Robot";
 import Mic from "../../components/global/Mic";
 import { useSelector } from "react-redux";
+import { 
+  FaNodeJs, 
+  FaReact, 
+  FaPython, 
+  FaJava, 
+  FaJsSquare, 
+  FaHtml5, 
+  FaCss3Alt, 
+  FaLinux, 
+  FaBootstrap, 
+  FaDocker,
+  FaDatabase,
+  FaGitAlt,
+
+} from "react-icons/fa";
 
 const About = () => {
   const voiceFac = useSelector((state) => state.voice.voiceFac);
@@ -54,7 +69,28 @@ const About = () => {
           </div>
         </div>
         <div className={classes.part2}>
-          <p></p>
+          <p>Hey there! How is it going everybody.</p>
+          <p>I am currently a 2nd year undergraduate student at VIT Vellore pursuing B.Tech in Computer And Engineering.</p>
+          <p>Started my dev journey right from the first year contributing to open source, I learnt alot from there.</p>
+          <p>Currently I am a full stack web developer working on MERN Stack.</p>
+          <p>Seeing the influence of Machines in our day to day life, I was overwhelmed by the technology which inspired me to explore Machine Learning.</p>
+          <h2>SKILLS</h2>
+          <div className={classes.icons}>
+            <FaReact size={40} />
+            <FaNodeJs size={40} />
+            <FaPython size={40} />
+            <FaJava size={40} />
+            <FaJsSquare size={40} />
+            <FaBootstrap size={40}  />
+            <FaHtml5 size={40}  />
+            <FaCss3Alt size={40}  />
+            <FaLinux size={40}  />
+            <FaDocker size={40} />
+            <FaDatabase size={40} />
+            <FaGitAlt size={40} />
+          </div>
+          <h2>My GOAL</h2>
+          <p>My ultimate goal is to provide efficient solution to real-life problems utilizing my knowledge in Web Development and Machine Learning.</p>
         </div>
       </div>
       <Robot content={content} />

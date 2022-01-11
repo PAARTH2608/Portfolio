@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Itim&family=Pacifico&family=Press+Start+2P&family=Yellowtail&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Bilbo+Swash+Caps&family=Dancing+Script:wght@600&family=Itim&family=Pacifico&family=Press+Start+2P&family=Yellowtail&display=swap');
 .mainDiv {
   background: rgb(238, 174, 202);
   background: linear-gradient(
@@ -24,8 +24,8 @@
   margin: 0;
   padding: 0;
   font-size: 6rem;
-  font-family: "Itim";
-  color: rgb(42, 145, 241);
+  font-family: "Press Start 2P";
+  color: rgb(241, 103, 163);
   padding-bottom: 2vh;
 }
 
@@ -42,12 +42,13 @@
   border: 3px solid rgba(28, 28, 29, 0.6);
   color: rgba(0, 0, 0, 0.6);
   font-size: 1.1rem;
+  cursor: pointer;
 }
 .homeButton button:hover {
   background-color: transparent;
   transform: scale(1.1);
-  border: 3px solid rgb(238, 240, 241);
-  color: white;
+  border: 3px solid rgb(241, 103, 163);
+  color: rgb(241, 103, 163);
 }
 
 .arrow{
