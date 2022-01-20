@@ -38,6 +38,7 @@ const Projects = () => {
               // img={project.img}
               heading={project.heading}
               desc={project.description}
+              link={project.link}
             />
           ))}
         </div>

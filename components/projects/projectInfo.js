@@ -3,7 +3,7 @@ import { FaGithub } from "react-icons/fa";
 import classes from './ProjectInfo.module.css';
 import PIC from '../../public/pic.png'
 const ProjectInfo = props => {
-    const style = { fontSize: "25", display: "flex", marginLeft: "auto" };
+    const style = { fontSize: "25", display: "flex", marginLeft: "auto", cursor: "pointer" };
   return (
     <>
       <div className={classes.project}>
@@ -13,7 +13,7 @@ const ProjectInfo = props => {
           <p>
             {props.desc}
           </p>
-          <FaGithub style={style} />
+          <FaGithub style={style} src={props.link}/>
         </div>
       </div>
     </>
