@@ -1,8 +1,8 @@
 import Navigation from "../../components/global/NavigationBar";
 import classes from "../../styles/Socials.module.css";
-import Robot from "../../components/global/Robot";
 import Mic from "../../components/global/Mic";
 import { useSelector } from "react-redux";
+import { FaFacebookF, FaGithub, FaInstagram, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 
 const Socials = () => {
   const voiceFac = useSelector((state) => state.voice.voiceFac);
@@ -14,8 +14,35 @@ const Socials = () => {
   return (
     <div className={classes.mainDiv}>
       <Navigation />
-      <div className={classes.container}></div>
-      <Robot content={content} />
+      <div className={classes.container}>
+        <div className={classes.inContainer}>
+          <h1>Achievements</h1>
+          <p>&bull;Current Semester CGPA - 8.89</p>
+          <p>&bull;JEE Mains Rank - AIR 15137</p>
+          <p>&bull;Girlscript Winter of Contributing - Contributor</p>
+        </div>
+        <div className={classes.inContainer}>
+          <h1>Courses And Certifications</h1>
+          <p>&bull;Certificate of Participation - GWOC&apos;21</p>
+          <p>&bull;Shape AI Certified Microsoft Learn Student Ambassador Program</p>
+          <p>&bull;MATLAB - Onramp</p>
+
+        </div>
+        <div className={classes.inContainer}>
+          <h1>Download CV</h1>
+          <button>Download</button>
+        </div>
+        <div className={classes.inContainer}>
+          <h1>Follow Me</h1>
+          <div>
+            <FaGithub size={35} />
+            <FaInstagram size={35} />
+            <FaFacebookF size={35} />
+            <FaLinkedinIn size={35} />
+            <FaTwitter size={35} />
+          </div>
+        </div>
+      </div>
       {voiceFac && <Mic content={contentTwo} />}
     </div>
   );

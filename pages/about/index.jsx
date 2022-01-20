@@ -4,29 +4,29 @@ import classes from "../../styles/About.module.css";
 import Navigation from "../../components/global/NavigationBar";
 import TwitterIcon from "@material-ui/icons/Twitter";
 import SchoolIcon from "@material-ui/icons/School";
-import Robot from "../../components/global/Robot";
 import Mic from "../../components/global/Mic";
 import { useSelector } from "react-redux";
-import { 
-  FaNodeJs, 
-  FaReact, 
-  FaPython, 
-  FaJava, 
-  FaJsSquare, 
-  FaHtml5, 
-  FaCss3Alt, 
-  FaLinux, 
-  FaBootstrap, 
+import {
+  FaNodeJs,
+  FaReact,
+  FaPython,
+  FaJava,
+  FaJsSquare,
+  FaHtml5,
+  FaCss3Alt,
+  FaLinux,
+  FaBootstrap,
   FaDocker,
   FaDatabase,
   FaGitAlt,
+  FaGithub,
+  FaCloud,
+  FaHackerrank,
 } from "react-icons/fa";
 
 const About = () => {
   const voiceFac = useSelector((state) => state.voice.voiceFac);
 
-  const content =
-    "Hey there! Rigel this side. I am there to help you. For any queries click me to open chat page. I'll help my best to solve it.";
   const contentTwo =
     "Voice command is activated. You can now click on the icon and start speaking the commands mentioned.";
 
@@ -62,17 +62,29 @@ const About = () => {
             </div>
             <div className={classes.orgns}>
               <h3>Organisations</h3>
-              <p>&nbsp;RoboVITics</p>
-              <p>&nbsp;ISA-VIT</p>
+              <p>&nbsp;&bull;&nbsp;RoboVITics</p>
+              <p>&nbsp;&bull;&nbsp;ISA-VIT</p>
             </div>
           </div>
         </div>
         <div className={classes.part2}>
           <p>Hey there! How is it going everybody.</p>
-          <p>I am currently a 2nd year undergraduate student at VIT Vellore pursuing B.Tech in Computer And Engineering.</p>
-          <p>Started my dev journey right from the first year contributing to open source, I learnt alot from there.</p>
-          <p>Currently I am a full stack web developer working on MERN Stack.</p>
-          <p>Seeing the influence of Machines in our day to day life, I was overwhelmed by the technology which inspired me to explore Machine Learning.</p>
+          <p>
+            I am currently a 2nd year undergraduate student at VIT Vellore
+            pursuing B.Tech in Computer And Engineering.
+          </p>
+          <p>
+            Started my dev journey right from the first year contributing to
+            open source, I learnt alot from there.
+          </p>
+          <p>
+            Currently I am a full stack web developer working on MERN Stack.
+          </p>
+          <p>
+            Seeing the influence of Machines in our day to day life, I was
+            overwhelmed by the technology which inspired me to explore Machine
+            Learning.
+          </p>
           <h2>SKILLS</h2>
           <div className={classes.icons}>
             <FaReact size={40} />
@@ -80,19 +92,27 @@ const About = () => {
             <FaPython size={40} />
             <FaJava size={40} />
             <FaJsSquare size={40} />
-            <FaBootstrap size={40}  />
-            <FaHtml5 size={40}  />
-            <FaCss3Alt size={40}  />
-            <FaLinux size={40}  />
+            <FaBootstrap size={40} />
+            <FaHtml5 size={40} />
+            <FaCss3Alt size={40} />
+            <FaLinux size={40} />
             <FaDocker size={40} />
             <FaDatabase size={40} />
             <FaGitAlt size={40} />
+            <FaHackerrank size={40} />
           </div>
           <h2>My GOAL</h2>
-          <p>My ultimate goal is to provide efficient solution to real-life problems utilizing my knowledge in Web Development and Machine Learning.</p>
+          <p>
+            My ultimate goal is to provide efficient solution to real-life
+            problems and to create new opportunities for employment utilizing my
+            knowledge in Web Development, Machine Learning and Bussiness
+            Architecture.
+          </p>
+          <div className={classes.github}>
+            <FaGithub size={35} />
+          </div>
         </div>
       </div>
-      <Robot content={content} />
       {voiceFac && <Mic content={contentTwo} />}
     </div>
   );

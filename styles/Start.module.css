@@ -99,6 +99,9 @@
 .box:hover{
   transform: scale(1.1);
 }
+.box div p{
+  margin: 0;
+}
 
 .icons{
   transform: scale(2);

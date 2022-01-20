@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
-
 import classes from "../styles/Start.module.css";
 import Spinner from "../components/home/spinner";
-import Robot from "../components/global/Robot";
 import Mic from "../components/global/Mic";
 import { useSelector, useDispatch } from "react-redux";
 import { voiceActions } from "../store/voice-slice";
@@ -13,8 +11,6 @@ import RecordVoiceOverIcon from "@material-ui/icons/RecordVoiceOver";
 export default function Start() {
   const voiceFac = useSelector((state) => state.voice.voiceFac);
 
-  const contentOne =
-    "Hey there! Rigel this side. I am there to help you. For any queries click me to open chat page. I'll help my best to solve it.";
   const contentTwo =
     "Voice command is activated. You can now click on the icon and start speaking the commands mentioned.";
 
@@ -30,11 +26,10 @@ export default function Start() {
             <h1>PAARTH JAIN</h1>
           </div>
           <div className={classes.homePara}>
-            <p>MERN Stack Developer & Machine Learning</p>
+            <p>MERN Stack Developer & Machine Learning Engineer</p>
           </div>
           <div className={classes.homeButton}>
             {/* <Spinner /> */}
-            <Robot content={contentOne} />
             {voiceFac && <Mic content={contentTwo} />}
           </div>
         </div>
