@@ -20,7 +20,6 @@ import {
   FaDatabase,
   FaGitAlt,
   FaGithub,
-  FaCloud,
   FaHackerrank,
 } from "react-icons/fa";
 
@@ -88,18 +87,31 @@ const About = () => {
           <h2>SKILLS</h2>
           <div className={classes.icons}>
             <FaReact size={40} />
+            {/* <p>ReactJS</p> */}
             <FaNodeJs size={40} />
+            {/* <p>NodeJS</p> */}
             <FaPython size={40} />
+            {/* <p>Python</p> */}
             <FaJava size={40} />
+            {/* <p>Java</p> */}
             <FaJsSquare size={40} />
+            {/* <p>Javascript</p> */}
             <FaBootstrap size={40} />
+            {/* <p>Bootstrap</p> */}
             <FaHtml5 size={40} />
+            {/* <p>HTML</p> */}
             <FaCss3Alt size={40} />
+            {/* <p>CSS</p> */}
             <FaLinux size={40} />
+            {/* <p>Linux</p> */}
             <FaDocker size={40} />
+            {/* <p>Docker</p> */}
             <FaDatabase size={40} />
+            {/* <p>MongoDB</p> */}
             <FaGitAlt size={40} />
+            {/* <p>GIT</p> */}
             <FaHackerrank size={40} />
+            {/* <p>HackerRank</p> */}
           </div>
           <h2>My GOAL</h2>
           <p>

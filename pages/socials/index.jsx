@@ -21,6 +21,8 @@ const Socials = () => {
       <div className={classes.container}>
         <div className={classes.inContainer}>
           <h1>Courses And Certifications</h1>
+          <p>&nbsp;&bull;&nbsp;REACT JS - The Complete Guide - Udemy</p>
+          <p>&nbsp;&bull;&nbsp;Docker And Kubernetes - Udemy</p>
           <p>&nbsp;&bull;&nbsp;Certificate of Participation - GWOC&apos;21</p>
           <p>
             &nbsp;&bull;&nbsp;Shape AI Certified Microsoft Learn Student
@@ -43,11 +45,11 @@ const Socials = () => {
         <div className={classes.inContainer}>
           <h1>Follow Me</h1>
           <div className={classes.social}>
-            <FaGithub size={35} />
-            <FaInstagram size={35} />
-            <FaFacebookF size={35} />
-            <FaLinkedinIn size={35} />
-            <FaTwitter size={35} />
+            <FaGithub size={33} />
+            <FaInstagram size={33} />
+            <FaFacebookF size={33} />
+            <FaLinkedinIn size={33} />
+            <FaTwitter size={33} />
           </div>
         </div>
       </div>
