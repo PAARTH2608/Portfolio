@@ -14,7 +14,6 @@ const Projects = () => {
     "Voice command is activated. You can now click on the icon and start speaking the commands mentioned.";
 
   const [hide, setHide] = useState("true");
-  const style = { fontSize: "25", display: "flex", marginLeft: "auto" };
 
   return (
     <div className={classes.mainDiv}>
