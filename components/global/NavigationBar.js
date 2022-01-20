@@ -8,7 +8,7 @@ import CastConnectedIcon from "@material-ui/icons/CastConnected";
 const Navigation = () => {
   return (
     <div className={classes.navbar}>
-      <Link href="/home" passHref>
+      <Link href="/" passHref>
         <div className={classes.home}>
           <div className={classes.icon}>
             <HomeIcon />

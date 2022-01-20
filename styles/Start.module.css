@@ -1,41 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Bilbo+Swash+Caps&family=Dancing+Script:wght@600&family=Itim&family=Pacifico&family=Press+Start+2P&family=Yellowtail&display=swap');
+.mainDiv {
+  background: rgb(238, 174, 202);
+  background: linear-gradient(
+    90deg,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(148, 187, 233, 1) 100%
+  );
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
 .start{
-    background: rgb(238, 174, 202);
-    background: linear-gradient(
-      90deg,
-      rgba(238, 174, 202, 1) 0%,
-      rgba(148, 187, 233, 1) 100%
-    );
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 0;
+}
+
+.homeHeading h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 6rem;
+  font-family: "Press Start 2P";
+  color: rgb(241, 103, 163);
+  padding-bottom: 2vh;
+  font-size: 2.5rem;
+}
+
+.homePara {
+  font-family: "Press Start 2P";
+  color: white;
+  font-size: 1.5rem;
+}
+
+.homeButton button {
+  background-color: transparent;
+  margin: 3%;
+  padding: 10%;
+  border: 3px solid rgba(28, 28, 29, 0.6);
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+.homeButton button:hover {
+  background-color: transparent;
+  transform: scale(1.1);
+  border: 3px solid rgb(241, 103, 163);
+  color: rgb(241, 103, 163);
+}
+
+.arrow{
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.4);
+  padding: 1%;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease-in;
+}
+.arrow:hover{
+  color: rgba(14, 13, 13, 0.4);
+  background-color: white;
 }
 
 .box{
-    height: 20vh;
-    width: 20%;
-    backdrop-filter: blur(7px) saturate(200%);
-    -webkit-backdrop-filter: blur(7px) saturate(200%);
-    background-color: rgba(255, 255, 255, 0.71);
-    border-radius: 5px;
-    border: 1px solid rgba(209, 213, 219, 0.3);
-    margin: 2%;
-    padding: 1%;
-    border-radius: 8px;
-    transition: all 0.5s ease-in;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    cursor: pointer;
+  height: 20vh;
+  width: 30%;
+  backdrop-filter: blur(7px) saturate(200%);
+  -webkit-backdrop-filter: blur(7px) saturate(200%);
+  background-color: rgba(255, 255, 255, 0.71);
+  border-radius: 5px;
+  border: 1px solid rgba(209, 213, 219, 0.3);
+  margin: 2%;
+  padding: 1%;
+  border-radius: 8px;
+  transition: all 0.5s ease-in;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  cursor: pointer;
 }
-
 .box:hover{
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .icons{
-    transform: scale(2);
-    color: rgb(231, 95, 170);
+  transform: scale(2);
+  color: rgb(231, 95, 170);
 }

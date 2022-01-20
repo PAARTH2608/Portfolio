@@ -14,6 +14,7 @@ const Socials = () => {
   return (
     <div className={classes.mainDiv}>
       <Navigation />
+      <div className={classes.container}></div>
       <Robot content={content} />
       {voiceFac && <Mic content={contentTwo} />}
     </div>

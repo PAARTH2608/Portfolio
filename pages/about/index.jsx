@@ -20,7 +20,6 @@ import {
   FaDocker,
   FaDatabase,
   FaGitAlt,
-
 } from "react-icons/fa";
 
 const About = () => {
