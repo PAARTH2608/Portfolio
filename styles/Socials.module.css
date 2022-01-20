@@ -35,18 +35,27 @@
   align-items: flex-start;
   justify-content: flex-start;
 }
-
 .inContainer{
-
+  width: 100%;
+}
+.inContainer h1{
+  font-size: 1.9rem;
+}
+.inContainer p{
+  font-size: 1.3rem;
 }
 .inContainer h1,
 .inContainer p{
   margin: 0;
 }
+.inContainer h1{
+  margin: 1vh;
+}
 .inContainer button{
-  padding: 5%;
+  padding: 1%;
   font-size: 1.3rem;
-  border-radius: 20px;
+  border-radius: 10px;
+  color: white;
   background: rgb(238, 174, 202);
   background: linear-gradient(
     90deg,
@@ -54,4 +63,10 @@
     rgba(148, 187, 233, 1) 100%
   );
   border: none;
+}
+.social{
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
