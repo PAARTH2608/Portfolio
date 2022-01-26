@@ -121,7 +121,11 @@ const About = () => {
             Architecture.
           </p>
           <div className={classes.github}>
-            <FaGithub size={35} />
+            <Link href="https://github.com/PAARTH2608" passHref>
+              <a target="_blank">
+                <FaGithub size={35} />
+              </a>
+            </Link>
           </div>
         </div>
       </div>

@@ -21,7 +21,7 @@
 
 .container {
   height: 77vh;
-  width: 85%;
+  width: 50%;
   display: flex;
   margin: auto;
   backdrop-filter: blur(7px) saturate(200%);
@@ -33,10 +33,28 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: flex-start;
+  justify-content: space-around;
+}
+.row{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin: auto;
+}
+.ContainerOne{
+  height: 50vh;
+  width: 10%;
+  display: flex;
+  margin: auto;
+  backdrop-filter: blur(7px) saturate(200%);
+  -webkit-backdrop-filter: blur(7px) saturate(200%);
+  background-color: rgba(255, 255, 255, 0.71);
+  border-radius: 5px;
+  border: 1px solid rgba(209, 213, 219, 0.3);
 }
 .inContainer{
   width: 100%;
+  text-align: center;
 }
 .inContainer h1{
   font-size: 1.9rem;
@@ -52,9 +70,9 @@
   margin: 0.4vh;
 }
 .inContainer button{
-  padding: 1%;
+  padding: 1.6%;
   font-size: 1.3rem;
-  border-radius: 10px;
+  border-radius: 5px;
   color: white;
   background: rgb(238, 174, 202);
   background: linear-gradient(
@@ -65,8 +83,9 @@
   border: none;
 }
 .social{
-  width: 30%;
+  width: 100%;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-around;
 }
