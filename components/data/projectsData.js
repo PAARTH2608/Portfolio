@@ -1,58 +1,75 @@
+import SmartPDFS from '/public/smartpdfs.png';
+import RoboQuiz from '/public/roboquiz.png';
+import Vortex from '/public/vortex.png';
+import PIC from '/public/pic.png'; 
+import Chat from '/public/chatapp.png';
+import FoodWeb from '/public/foodweb.png';
+import ForeCast from '/public/forecast.png';
+import Notes from '/public/notesapp.png';
+
 export const ProjectsData = [
   {
     id: 1,
-    img: "",
-    heading: "Project Name",
+    img: SmartPDFS,
+    heading: "Smart PDF's",
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-    link: "https://github.com/PAARTH2608"
+      "",
+    link: "https://github.com/PAARTH2608/Smart-PDFs-Frontend"
   },
   {
     id: 2,
-    img: "",
-    heading: "Project Name",
+    img: RoboQuiz,
+    heading: "RoboVITics Quiz Portal",
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-    link: "https://github.com/PAARTH2608",
+      "",
+    link: "https://github.com/PAARTH2608/Robovitics-Quiz-Portal",
   },
   {
     id: 3,
-    img: "",
-    heading: "Project Name",
+    img: Vortex,
+    heading: "Vortex RoboVITics",
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-    link: "https://github.com/PAARTH2608",
+      "",
+    link: "https://github.com/PAARTH2608/Vortex-Website",
   },
   {
     id: 4,
-    img: "",
-    heading: "Project Name",
+    img: Chat,
+    heading: "Chat Application",
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-    link: "https://github.com/PAARTH2608",
+      "",
+    link: "https://github.com/PAARTH2608/Chat-App",
   },
   {
     id: 5,
-    img: "",
-    heading: "Project Name",
+    img: PIC,
+    heading: "Portfolio Website",
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-    link: "https://github.com/PAARTH2608",
+      "",
+    link: "https://github.com/PAARTH2608/Portfolio",
   },
   {
     id: 6,
-    img: "",
-    heading: "Project Name",
+    img: FoodWeb,
+    heading: "Foodiezz Web",
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-    link: "https://github.com/PAARTH2608",
+      "",
+    link: "https://github.com/PAARTH2608/Foodiezz_web",
   },
   {
     id: 7,
-    img: "",
-    heading: "Project Name",
+    img: ForeCast,
+    heading: "Fore Cast",
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-    link: "https://github.com/PAARTH2608",
+      "",
+    link: "https://github.com/PAARTH2608/fore_cast",
+  },
+  {
+    id: 8,
+    img: Notes,
+    heading: "Terminal Notes",
+    description:
+      "",
+    link: "https://github.com/PAARTH2608/notes_app",
   },
 ];

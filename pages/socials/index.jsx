@@ -23,22 +23,22 @@ const Socials = () => {
         <div className={classes.container}>
           <div className={classes.inContainer}>
             <h1>Courses And Certifications</h1>
-            <p>&nbsp;&bull;&nbsp;REACT JS - The Complete Guide - Udemy</p>
-            <p>&nbsp;&bull;&nbsp;Docker And Kubernetes - Udemy</p>
-            <p>&nbsp;&bull;&nbsp;Certificate of Participation - GWOC&apos;21</p>
+            <p>REACT JS - The Complete Guide - Udemy</p>
+            <p>Docker And Kubernetes - Udemy</p>
+            <p>Certificate of Participation - GWOC&apos;21</p>
             <p>
-              &nbsp;&bull;&nbsp;Shape AI Certified Microsoft Learn Student
+              Shape AI Certified Microsoft Learn Student
               Ambassador Program
             </p>
-            <p>&nbsp;&bull;&nbsp;MATLAB - Onramp</p>
+            <p>MATLAB - Onramp</p>
           </div>
           <div className={classes.inContainer}>
             <h1>Achievements</h1>
             <p>
-              &nbsp;&bull;&nbsp;Girlscript Winter of Contributing - Contributor
+              Girlscript Winter of Contributing - Contributor
             </p>
-            <p>&nbsp;&bull;&nbsp;Current Semester CGPA - 8.89</p>
-            <p>&nbsp;&bull;&nbsp;JEE Mains Rank - AIR 15137</p>
+            <p>Current Semester CGPA - 8.89</p>
+            <p>JEE Mains Rank - AIR 15137</p>
           </div>
           <div className={classes.inContainer}>
             <h1>Download CV</h1>

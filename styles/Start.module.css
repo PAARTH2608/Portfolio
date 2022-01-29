@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Bilbo+Swash+Caps&family=Dancing+Script:wght@600&family=Itim&family=Pacifico&family=Press+Start+2P&family=Yellowtail&display=swap');
 .mainDiv {
-  background: rgb(238, 174, 202);
+  background: rgb(77, 196, 237);
   background: linear-gradient(
-    90deg,
-    rgba(238, 174, 202, 1) 0%,
-    rgba(148, 187, 233, 1) 100%
+    180deg,
+    rgba(77, 196, 237, 0.9923319669664741) 45%,
+    rgba(29, 45, 79, 1) 100%
   );
   height: 100vh;
   width: 100%;
@@ -33,7 +33,7 @@
   padding: 0;
   font-size: 6rem;
   font-family: "Press Start 2P";
-  color: rgb(241, 103, 163);
+  color: rgb(18, 93, 155);
   padding-bottom: 2vh;
   font-size: 2.5rem;
 }
@@ -57,7 +57,7 @@
   background-color: transparent;
   transform: scale(1.1);
   border: 3px solid rgb(241, 103, 163);
-  color: rgb(241, 103, 163);
+  color: rgb(18, 93, 155);
 }
 
 .arrow{
@@ -105,5 +105,5 @@
 
 .icons{
   transform: scale(2);
-  color: rgb(231, 95, 170);
+  color: rgb(18, 93, 155);
 }

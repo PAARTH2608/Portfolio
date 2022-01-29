@@ -37,7 +37,7 @@ const Projects = () => {
           }).map((project) => (
             <ProjectInfo
               key={project.id}
-              // img={project.img}
+              img={project.img}
               heading={project.heading}
               desc={project.description}
               link={project.link}
