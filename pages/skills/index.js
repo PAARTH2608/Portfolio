@@ -1,42 +1,24 @@
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import { Suspense } from "react";
 import { AiOutlineArrowDown } from "react-icons/ai";
 import SkillElements from "../../components/pageComponents/Skills/SkillElements";
-import Socials from "../../components/pageComponents/Socials/Socials";
 import {
   Container,
   InformationContainer,
   ContactMeContainer,
-  ClickOpenContainer,
-  SocialContainer,
-  PressEnterContainer,
   ScrollButtonContainer,
-  EarthContainer,
   HelperDiv,
   ScrollHeading,
   Button,
   Span1,
-  Span2,
   Heading,
   SkillsContainer,
-  Layer,
 } from "../../components/pageStyles/SkillsPage";
 
 const Skills = () => {
   const styles = {
     backgroundColor: "transparent",
-  };
-  const styles1 = {
-    backgroundColor: "transparent",
-    width: "85%",
-  };
-  const leftBorderStyle = {
-    backgroundColor: "transparent",
-    position: "absolute",
-    left: "0",
-    top: "0",
   };
   const arrowStyle = {
     position: "absolute",
@@ -102,9 +84,6 @@ const Skills = () => {
           <SkillElements />
         </SkillsContainer>
       </InformationContainer>
-      <SocialContainer>
-        <Socials />
-      </SocialContainer>
       <Link href="/experience">
         <ScrollButtonContainer left>
           <ScrollHeading>Experience</ScrollHeading>
@@ -125,17 +104,6 @@ const Skills = () => {
           </Button>
         </ScrollButtonContainer>
       </Link>
-      <EarthContainer>
-        {/* <GlowyEarth> */}
-        <Image
-          src={"/earth.svg"}
-          height={1100}
-          width={1100}
-          alt="earth"
-          style={styles}
-        />
-        {/* </GlowyEarth> */}
-      </EarthContainer>
     </Container>
   );
 };

@@ -1,21 +1,16 @@
 import Image from "next/image";
-import Socials from "../../components/pageComponents/Socials/Socials";
 import {
   Container,
   InformationContainer,
-  SocialContainer,
   ContentContainer,
 } from "../../components/pageStyles/ProjectsContainers";
 import {
   HelperDiv,
   ContactMeContainer,
-  EarthContainer,
   ScrollButtonContainer,
   ScrollHeading,
   Button,
   Span1,
-  Span2,
-  PressEnterContainer,
 } from "../../components/pageStyles/MainPage";
 import ProjectElements from "../../components/pageComponents/projects/ProjectElement";
 import { AiOutlineArrowDown } from "react-icons/ai";
@@ -80,9 +75,6 @@ const Projects = () => {
           <ProjectElements />
         </ContentContainer>
       </InformationContainer>
-      <SocialContainer>
-        <Socials />
-      </SocialContainer>
       <Link href="/experience" passHref>
         <ScrollButtonContainer>
           <ScrollHeading>Experience</ScrollHeading>
@@ -103,17 +95,6 @@ const Projects = () => {
           </Button>
         </ScrollButtonContainer>
       </Link>
-      <EarthContainer>
-        {/* <GlowyEarth> */}
-        <Image
-          src={"/earth.svg"}
-          height={1100}
-          width={1100}
-          alt="earth"
-          style={styles}
-        />
-        {/* </GlowyEarth> */}
-      </EarthContainer>
     </Container>
   );
 };

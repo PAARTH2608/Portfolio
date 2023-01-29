@@ -3,15 +3,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { AiOutlineArrowDown } from "react-icons/ai";
 import ContactElement from "../../components/pageComponents/Contact/ContactElement";
-import Socials from "../../components/pageComponents/Socials/Socials";
 import {
   Container,
   InformationContainer,
   ContactMeContainer,
-  SocialContainer,
-  EarthContainer,
   HelperDiv,
-  Heading,
   ContentContainer,
   GoBack,
 } from "../../components/pageStyles/Contact";
@@ -73,9 +69,6 @@ const Contact = () => {
           <ContactElement />
         </ContentContainer>
       </InformationContainer>
-      <SocialContainer>
-        <Socials />
-      </SocialContainer>
       <Link href="/projects" passHref>
         <ScrollButtonContainer>
           <ScrollHeading>Experience</ScrollHeading>

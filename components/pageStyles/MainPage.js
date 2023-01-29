@@ -69,6 +69,7 @@ export const SocialContainer = styled.div`
   align-items: center;
   justify-content: space-between;
   background-color: transparent;
+  z-index: 2;
 `;
 export const PressEnterContainer = styled.div`
   height: 20vh;
@@ -90,8 +91,8 @@ export const ScrollButtonContainer = styled.div`
   background-color: transparent;
   border: 1px solid #ceb7ff;
   position: absolute;
-  right: ${props => props.left ? "50px" : "unset"};
-  left: ${props => props.left ? "unset" : "50px"};
+  right: ${(props) => (props.left ? "50px" : "unset")};
+  left: ${(props) => (props.left ? "unset" : "50px")};
   bottom: 50px;
   padding: 1%;
   display: flex;
@@ -219,6 +220,7 @@ export const EarthContainer = styled.div`
   align-items: center;
   justify-content: center;
   padding-top: 30vh;
+  z-index: 2;
 `;
 export const GlowyEarth = styled.div`
   border: 1px solid green;

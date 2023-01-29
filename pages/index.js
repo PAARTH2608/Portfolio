@@ -1,23 +1,17 @@
 import Image from "next/image";
-import Socials from "../components/pageComponents/Socials/Socials";
 import {
   Container,
   InformationContainer,
   ContactMeContainer,
   ClickOpenContainer,
-  SocialContainer,
   PressEnterContainer,
   ScrollButtonContainer,
-  EarthContainer,
   HelperDiv,
-  // Earth,
   ScrollHeading,
   Button,
   Span1,
-  Span2,
 } from "../components/pageStyles/MainPage";
 import { AiOutlineArrowDown } from "react-icons/ai";
-// import Earth from "../components/Earth/Earth";
 import Head from "next/head";
 import Link from "next/link";
 
@@ -124,10 +118,7 @@ const Home = () => {
           />
         </ClickOpenContainer>
       </InformationContainer>
-      <SocialContainer>
-        <Socials />
-      </SocialContainer>
-      <Link href="/" passHref>
+      <Link href="https://drive.google.com/file/d/1BhWCzBY6UznMOXy5bOGmj9KxbFXNMbnw/view?usp=sharing" passHref target="_blank" >
         <PressEnterContainer>
           <ScrollHeading>Resume</ScrollHeading>
           <Button>
@@ -147,17 +138,6 @@ const Home = () => {
           </Button>
         </ScrollButtonContainer>
       </Link>
-      <EarthContainer>
-        {/* <GlowyEarth> */}
-        <Image
-          src={"/earth.svg"}
-          height={1100}
-          width={1100}
-          alt="earth"
-          style={styles}
-        />
-        {/* </GlowyEarth> */}
-      </EarthContainer>
     </Container>
   );
 };
