@@ -3,14 +3,9 @@ import styled from "styled-components";
 export const Container = styled.div`
   height: 100vh;
   width: 100vw;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  background-image: url("/images/projects.png");
-
   z-index: 1;
   min-height: 100vh;
 `;

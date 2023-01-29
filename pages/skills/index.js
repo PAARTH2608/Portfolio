@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
 import { Suspense } from "react";
 import { AiOutlineArrowDown } from "react-icons/ai";
 import SkillElements from "../../components/pageComponents/Skills/SkillElements";
@@ -74,8 +75,7 @@ const Skills = () => {
             bottom: "0px",
             left: "0px",
             opacity: 0.5,
-          }
-
+          },
         }}
       />
       <HelperDiv>
@@ -105,22 +105,26 @@ const Skills = () => {
       <SocialContainer>
         <Socials />
       </SocialContainer>
-      <PressEnterContainer>
-        <ScrollHeading>Download CV</ScrollHeading>
-        <Button>
-          <Span1>
-            <AiOutlineArrowDown style={arrowStyle} />
-          </Span1>
-        </Button>
-      </PressEnterContainer>
-      <ScrollButtonContainer>
-        <ScrollHeading>SCROLL</ScrollHeading>
-        <Button>
-          <Span1>
-            <Span2></Span2>
-          </Span1>
-        </Button>
-      </ScrollButtonContainer>
+      <Link href="/experience">
+        <ScrollButtonContainer left>
+          <ScrollHeading>Experience</ScrollHeading>
+          <Button>
+            <Span1>
+              <AiOutlineArrowDown style={arrowStyle} />
+            </Span1>
+          </Button>
+        </ScrollButtonContainer>
+      </Link>
+      <Link href="/" passHref>
+        <ScrollButtonContainer>
+          <ScrollHeading>Main</ScrollHeading>
+          <Button>
+            <Span1>
+              <AiOutlineArrowDown style={arrowStyle} />
+            </Span1>
+          </Button>
+        </ScrollButtonContainer>
+      </Link>
       <EarthContainer>
         {/* <GlowyEarth> */}
         <Image

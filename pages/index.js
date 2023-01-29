@@ -64,14 +64,14 @@ const Home = () => {
       </Head>
       {/* <Earth /> */}
 
-      <Image 
-      src={'/images/background-1.png'}
-      alt="background"
-      fill
-      style={{
-        objectFit:"cover",
-        objectPosition:"center"
-      }}
+      <Image
+        src={"/images/background-1.png"}
+        alt="background"
+        fill
+        style={{
+          objectFit: "cover",
+          objectPosition: "center",
+        }}
       />
 
       <HelperDiv>
@@ -127,20 +127,22 @@ const Home = () => {
       <SocialContainer>
         <Socials />
       </SocialContainer>
-      <PressEnterContainer>
-        <ScrollHeading>Download CV</ScrollHeading>
-        <Button>
-          <Span1>
-            <AiOutlineArrowDown style={arrowStyle} />
-          </Span1>
-        </Button>
-      </PressEnterContainer>
-      <Link href="/skills">
-        <ScrollButtonContainer>
-          <ScrollHeading>SCROLL</ScrollHeading>
+      <Link href="/" passHref>
+        <PressEnterContainer>
+          <ScrollHeading>Resume</ScrollHeading>
           <Button>
             <Span1>
-              <Span2></Span2>
+              <AiOutlineArrowDown style={arrowStyle} />
+            </Span1>
+          </Button>
+        </PressEnterContainer>
+      </Link>
+      <Link href="/skills" passHref>
+        <ScrollButtonContainer left>
+          <ScrollHeading>Skills</ScrollHeading>
+          <Button>
+            <Span1>
+              <AiOutlineArrowDown style={arrowStyle} />
             </Span1>
           </Button>
         </ScrollButtonContainer>

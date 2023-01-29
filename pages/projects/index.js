@@ -20,6 +20,7 @@ import {
 import ProjectElements from "../../components/pageComponents/projects/ProjectElement";
 import { AiOutlineArrowDown } from "react-icons/ai";
 import Head from "next/head";
+import Link from "next/link";
 
 const Projects = () => {
   const styles = {
@@ -46,6 +47,16 @@ const Projects = () => {
       <Head>
         <title>Projects</title>
       </Head>
+
+      <Image
+        src={"/images/projects.png"}
+        alt="background"
+        fill
+        style={{
+          objectFit: "cover",
+          objectPosition: "center",
+        }}
+      />
       <HelperDiv>
         <ContactMeContainer>
           <Image
@@ -72,22 +83,26 @@ const Projects = () => {
       <SocialContainer>
         <Socials />
       </SocialContainer>
-      <PressEnterContainer>
-        <ScrollHeading>Download CV</ScrollHeading>
-        <Button>
-          <Span1>
-            <AiOutlineArrowDown style={arrowStyle} />
-          </Span1>
-        </Button>
-      </PressEnterContainer>
-      <ScrollButtonContainer>
-        <ScrollHeading>SCROLL</ScrollHeading>
-        <Button>
-          <Span1>
-            <Span2></Span2>
-          </Span1>
-        </Button>
-      </ScrollButtonContainer>
+      <Link href="/experience" passHref>
+        <ScrollButtonContainer>
+          <ScrollHeading>Experience</ScrollHeading>
+          <Button>
+            <Span1>
+              <AiOutlineArrowDown style={arrowStyle} />
+            </Span1>
+          </Button>
+        </ScrollButtonContainer>
+      </Link>
+      <Link href="/contact" passHref>
+        <ScrollButtonContainer left>
+          <ScrollHeading>Contact Me</ScrollHeading>
+          <Button>
+            <Span1>
+              <AiOutlineArrowDown style={arrowStyle} />
+            </Span1>
+          </Button>
+        </ScrollButtonContainer>
+      </Link>
       <EarthContainer>
         {/* <GlowyEarth> */}
         <Image

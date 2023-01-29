@@ -90,7 +90,8 @@ export const ScrollButtonContainer = styled.div`
   background-color: transparent;
   border: 1px solid #ceb7ff;
   position: absolute;
-  right: 50px;
+  right: ${props => props.left ? "50px" : "unset"};
+  left: ${props => props.left ? "unset" : "50px"};
   bottom: 50px;
   padding: 1%;
   display: flex;

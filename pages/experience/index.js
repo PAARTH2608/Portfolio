@@ -20,6 +20,7 @@ import {
 import ExperienceElements from "../../components/pageComponents/experience/ExperienceElements";
 import { AiOutlineArrowDown } from "react-icons/ai";
 import Head from "next/head";
+import Link from "next/link";
 
 const Experience = () => {
   const styles = {
@@ -46,6 +47,15 @@ const Experience = () => {
       <Head>
         <title>Experience</title>
       </Head>
+      <Image
+        src={"/images/experience-background.png"}
+        alt="background"
+        fill
+        style={{
+          objectFit: "cover",
+          objectPosition: "center",
+        }}
+      />
       <HelperDiv>
         <ContactMeContainer>
           <Image
@@ -72,22 +82,26 @@ const Experience = () => {
       <SocialContainer>
         <Socials />
       </SocialContainer>
-      <PressEnterContainer>
-        <ScrollHeading>Download CV</ScrollHeading>
-        <Button>
-          <Span1>
-            <AiOutlineArrowDown style={arrowStyle} />
-          </Span1>
-        </Button>
-      </PressEnterContainer>
-      <ScrollButtonContainer>
-        <ScrollHeading>SCROLL</ScrollHeading>
-        <Button>
-          <Span1>
-            <Span2></Span2>
-          </Span1>
-        </Button>
-      </ScrollButtonContainer>
+      <Link href="/skills" passHref>
+        <ScrollButtonContainer>
+          <ScrollHeading>Skills</ScrollHeading>
+          <Button>
+            <Span1>
+              <AiOutlineArrowDown style={arrowStyle} />
+            </Span1>
+          </Button>
+        </ScrollButtonContainer>
+      </Link>
+      <Link href="/projects" passHref>
+        <ScrollButtonContainer left>
+          <ScrollHeading>Projects</ScrollHeading>
+          <Button>
+            <Span1>
+              <AiOutlineArrowDown style={arrowStyle} />
+            </Span1>
+          </Button>
+        </ScrollButtonContainer>
+      </Link>
       <EarthContainer>
         {/* <GlowyEarth> */}
         <Image
