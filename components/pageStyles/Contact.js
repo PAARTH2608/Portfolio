@@ -6,9 +6,8 @@ export const Container = styled.div`
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  
   z-index: 1;
-  min-height: 100vh;
+  position: relative;
 `;
 export const InformationContainer = styled.div`
   position: absolute;
@@ -34,6 +33,7 @@ export const HelperDiv = styled.div`
   align-items: center;
   justify-content: flex-end;
   background-color: transparent;
+  z-index: 999;
 `;
 export const ContactMeContainer = styled.div`
   height: 10vh;

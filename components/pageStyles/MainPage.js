@@ -6,23 +6,7 @@ export const Container = styled.div`
   display: flex;
   align-items: flex-start;
   justify-content: center;
-
-  z-index: 1;
-  min-height: 100vh;
-  // padding: 4rem 0;
-
-  &::after {
-    content: "";
-    display: block;
-    position: fixed;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
-  }
+  z-index: 1.5;
 `;
 export const InformationContainer = styled.div`
   position: absolute;
@@ -33,19 +17,23 @@ export const InformationContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+  z-index: 999;
 `;
 export const HelperDiv = styled.div`
-  height: 10vh;
-  width: 100%;
   display: flex;
   align-items: center;
   justify-content: flex-end;
   background-color: transparent;
+  z-index:9999;
+  position: position;
 `;
 export const ContactMeContainer = styled.div`
   height: 10vh;
   width: 10%;
   background-color: transparent;
+  z-index: 999;
+  position: fixed;
+  padding-top: 2vh;
 `;
 export const ClickOpenContainer = styled.div`
   margin-top: 15vh;
@@ -61,7 +49,7 @@ export const ClickOpenContainer = styled.div`
 export const SocialContainer = styled.div`
   height: 50vh;
   width: 10%;
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 15%;
   padding: 1%;
@@ -69,13 +57,13 @@ export const SocialContainer = styled.div`
   align-items: center;
   justify-content: space-between;
   background-color: transparent;
-  z-index: 2;
+  z-index: 5;
 `;
 export const PressEnterContainer = styled.div`
   height: 20vh;
   width: 8%;
   background-color: transparent;
-  position: absolute;
+  position: fixed;
   left: 50px;
   bottom: 50px;
   padding: 1%;
@@ -84,13 +72,14 @@ export const PressEnterContainer = styled.div`
   align-items: center;
   justify-content: space-between;
   border-radius: 10px;
+  z-index: 9999;
 `;
-export const ScrollButtonContainer = styled.div`
+export const ScrollButtonContainer = styled.button`
   height: 20vh;
   width: 8%;
   background-color: transparent;
   border: 1px solid #ceb7ff;
-  position: absolute;
+  position: fixed;
   right: ${(props) => (props.left ? "50px" : "unset")};
   left: ${(props) => (props.left ? "unset" : "50px")};
   bottom: 50px;
@@ -104,6 +93,7 @@ export const ScrollButtonContainer = styled.div`
   &:hover {
     cursor: pointer;
   }
+  z-index: 9999;
 `;
 
 export const ScrollHeading = styled.div`
@@ -211,8 +201,8 @@ export const Span2 = styled.div`
   background-color: #ceb7ff;
 `; // inner
 export const EarthContainer = styled.div`
-  position: absolute;
-  transform: translateY(85vh);
+  position: fixed;
+  transform: translateY(80vh);
   height: 40vh;
   width: 100%;
   background-color: transparent;

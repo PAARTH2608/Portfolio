@@ -3,14 +3,11 @@ import styled from "styled-components";
 export const Container = styled.div`
   height: 100vh;
   width: 100vw;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  z-index: 1;
-  min-height: 100vh;
+  z-index: 1.5;
+  position: relative;
 `;
 export const Layer = styled.div`
   background-color: black;
@@ -25,12 +22,13 @@ export const InformationContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  z-index: 999;
 `;
 export const SkillsContainer = styled.div`
   height: 60vh;
   width: 60%;
   background-color: transparent;
-  z-index: 3;
+  z-index: 5;
   padding: 2%;
 `;
 export const Heading = styled.div`

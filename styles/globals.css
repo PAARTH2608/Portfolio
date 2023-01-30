@@ -6,7 +6,14 @@
   background-color: #000;
 }
 body {
-  overflow-y: hidden;
+  overflow-x: hidden;
+}
+html {
+  overflow: scroll;
+}
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; /* make scrollbar transparent */
 }
 .swiper-button-next {
   background-image: url(/rightArrow.svg);

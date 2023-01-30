@@ -11,6 +11,7 @@ const Container = styled.div`
   background-color: transparent;
   height: 50vh;
   width: 100%;
+  z-index: 3;
 `;
 const Heading = styled.h3`
   font-size: 1.8rem;

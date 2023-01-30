@@ -6,8 +6,8 @@ export const Container = styled.div`
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  z-index: 1;
-  min-height: 100vh;
+  z-index: 1.5;
+  position: relative;
 `;
 export const InformationContainer = styled.div`
   position: absolute;
@@ -18,12 +18,13 @@ export const InformationContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  z-index: 999;
 `;
 export const ContentContainer = styled.div`
   height: 60vh;
   width: 60%;
   background-color: transparent;
-  z-index: 3;
+  z-index: 5;
   padding: 2%;
 `;
 export const ContactContainer = styled.div``;
