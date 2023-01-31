@@ -93,7 +93,7 @@ export const ScrollButtonContainer = styled.button`
   &:hover {
     cursor: pointer;
   }
-  z-index: 9999;
+  z-index: 999999;
 `;
 
 export const ScrollHeading = styled.div`

@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Suspense, useEffect, useState } from "react";
 import { AiOutlineArrowDown } from "react-icons/ai";
+import Earth from "../components/Earth/Earth";
 import Socials from "../components/pageComponents/Socials/Socials";
 import PageLoader from "../components/PageLoader";
 import {
@@ -17,6 +18,7 @@ import {
   SocialContainer,
   Span1,
 } from "../components/pageStyles/MainPage";
+import EarthTransition from "../framer/EarthTransition";
 import "../styles/globals.css";
 
 export default function App({ Component, pageProps }) {
@@ -30,7 +32,6 @@ export default function App({ Component, pageProps }) {
       let heightToHideFrom = 2240;
       const winScroll =
         document.body.scrollTop || document.documentElement.scrollTop;
-      console.log(winScroll);
 
       if (winScroll > heightToHideFrom) {
         visible && // to limit setting state only the first time
@@ -77,17 +78,9 @@ export default function App({ Component, pageProps }) {
         <SocialContainer>
           <Socials />
         </SocialContainer>
-        <EarthContainer>
-          {visible && (
-            <Image
-              src={"/earth.svg"}
-              height={1100}
-              width={1100}
-              alt="earth"
-              style={styles}
-            />
-          )}
-        </EarthContainer>
+        {/* <EarthTransition> */}
+        <EarthContainer>{visible && <Earth />}</EarthContainer>
+        {/* </EarthTransition> */}
         <Link
           href="https://drive.google.com/file/d/1BhWCzBY6UznMOXy5bOGmj9KxbFXNMbnw/view?usp=sharing"
           passHref
@@ -102,7 +95,7 @@ export default function App({ Component, pageProps }) {
             </Button>
           </PressEnterContainer>
         </Link>
-
+        <Link href={"/"}>
         <ScrollButtonContainer left>
           <ScrollHeading>Click</ScrollHeading>
           <Button>
@@ -111,6 +104,7 @@ export default function App({ Component, pageProps }) {
             </Span1>
           </Button>
         </ScrollButtonContainer>
+      </Link>
 
         <Component {...pageProps} />
       </Suspense>

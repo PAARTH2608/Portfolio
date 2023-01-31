@@ -23,8 +23,7 @@ export const useScroll = () => {
 	};
 	useEffect(() => {
 		function watchScroll() {
-			window.addEventListener('click', scrollAnim);
-			console.log('scroll', scroll)
+			window.addEventListener('scroll', scrollAnim);
 		}
 		watchScroll();
 		return () => {

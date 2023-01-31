@@ -2,7 +2,7 @@ import Image from "next/image";
 import { useScroll } from "./UseScroll";
 
 import styled, { keyframes } from "styled-components";
-import earth from "./earth.svg";
+import earth from "./earth.png";
 
 const floatAnim = (angle) => keyframes`
 	0% {
@@ -19,7 +19,7 @@ export const EarthDiv = styled.div`
   position: absolute;
   bottom: 0%;
   left: 50%;
-  transform: translate(-50%, 55%);
+  transform: translate(-50%, 35%);
   @media screen and (max-width: 720px) {
     top: 100%;
     left: 0vw;
@@ -28,29 +28,41 @@ export const EarthDiv = styled.div`
   }
   background-color: transparent;
 `;
+export const EarthImg = styled.img`
+	width: 100%;
+	height: 100%;
+	animation: ${(props) => floatAnim(props.angle)} 6s ease-in-out infinite;
+	transition: transform 0.3s;
+  z-index: 999999;
+  background-color: transparent;
+
+	@media screen and (max-width: 720px) {
+		width: 80vw;
+	}
+`;
+EarthImg.defaultProps = {
+  src: earth
+}
 
 const Earth = () => {
   const [scroll] = useScroll();
+  console.log("src", scroll);
   const styles = {
     backgroundColor: "transparent",
-	width: "100%",
-	height: "200vh",
-	animation: `${(props) => floatAnim(-(scroll * 360) / 100)} 6s ease-in-out infinite`,
-	transition: "transform 0.3s",
-	zIndex: 999999
-	// @media screen and (max-width: 720px) {
-	//   width: 80vw;
-	// }
+    width: "100%",
+    height: "300vh",
+    animation: `${(props) =>
+      floatAnim(-(scroll * 360) / 100)} 6s ease-in-out infinite`,
+    transition: "transform 0.3s",
+    zIndex: 999999,
+    // @media screen and (max-width: 720px) {
+    //   width: 80vw;
+    // }
   };
   return (
     <EarthDiv>
-      <Image
-        src={earth}
-        style={styles}
-        height={200}
-        width={200}
-        alt="earth"
-      />
+      {/* <Image src={earth} style={styles} height={200} width={200} alt="earth" /> */}
+      <EarthImg src="/earth.svg" angle={-(scroll * 360) / 100} />
     </EarthDiv>
   );
 };
