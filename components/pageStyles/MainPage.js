@@ -34,6 +34,7 @@ export const ContactMeContainer = styled.div`
   z-index: 999;
   position: fixed;
   padding-top: 2vh;
+  cursor: pointer;
 `;
 export const ClickOpenContainer = styled.div`
   margin-top: 15vh;

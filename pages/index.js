@@ -6,7 +6,9 @@ import Projects from "./projects";
 import Contact from "./contact";
 
 import styled from "styled-components";
-import Transition from "../framer/Transition";
+import { useRef } from "react";
+import { motion } from "framer-motion";
+import { useFollowPointer } from "../framer/useFollowPointer";
 
 const MainContainer = styled.div`
   display: flex;
@@ -16,20 +18,33 @@ const MainContainer = styled.div`
   background-color: #1e1e1e;
   height: fit-content;
 `;
+
 const Home = () => {
+  const ref = useRef(null);
+  const { x, y } = useFollowPointer(ref);
+
   return (
-    <Transition>
-      <MainContainer>
-        <Head>
-          <title>Portfolio</title>
-        </Head>
-        <Main />
-        <Skills />
-        <Experience />
-        <Projects />
-        <Contact />
-      </MainContainer>
-    </Transition>
+    <MainContainer>
+      <motion.div
+        ref={ref}
+        className="box"
+        animate={{ x, y }}
+        transition={{
+          type: "spring",
+          damping: 3,
+          stiffness: 50,
+          restDelta: 0.001,
+        }}
+      />
+      <Head>
+        <title>Portfolio</title>
+      </Head>
+      <Main />
+      <Skills />
+      <Experience />
+      <Projects />
+      <Contact />
+    </MainContainer>
   );
 };
 export default Home;
