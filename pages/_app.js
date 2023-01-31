@@ -2,6 +2,7 @@
 // import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { Suspense, useEffect, useState } from "react";
 import { AiOutlineArrowDown } from "react-icons/ai";
 import Earth from "../components/Earth/Earth";
@@ -18,10 +19,10 @@ import {
   SocialContainer,
   Span1,
 } from "../components/pageStyles/MainPage";
-import EarthTransition from "../framer/EarthTransition";
 import "../styles/globals.css";
 
 export default function App({ Component, pageProps }) {
+  const router = useRouter();
   const [visible, setIsVisible] = useState(true);
   const styles = {
     backgroundColor: "transparent",
@@ -43,6 +44,25 @@ export default function App({ Component, pageProps }) {
     window.addEventListener("scroll", listenToScroll);
     return () => window.removeEventListener("scroll", listenToScroll);
   }, [visible]);
+
+  const [angle, setAngle] = useState();
+  useEffect(() => {
+    const routeChangeStart = (url, { shallow }) => {
+      console.log("start animation");
+    };
+
+    const routeChangeComplete = (url, { shallow }) => {
+      setAngle(25);
+    };
+
+    router.events.on("routeChangeStart", routeChangeStart);
+    router.events.on("routeChangeComplete", routeChangeComplete);
+
+    return () => {
+      router.events.off("routeChangeStart", routeChangeStart);
+      router.events.off("routeChangeComplete", routeChangeComplete);
+    };
+  }, []);
 
   const arrowStyle = {
     position: "absolute",
@@ -79,7 +99,7 @@ export default function App({ Component, pageProps }) {
           <Socials />
         </SocialContainer>
         {/* <EarthTransition> */}
-        <EarthContainer>{visible && <Earth />}</EarthContainer>
+        <EarthContainer>{visible && <Earth angle={angle} />}</EarthContainer>
         {/* </EarthTransition> */}
         <Link
           href="https://drive.google.com/file/d/1BhWCzBY6UznMOXy5bOGmj9KxbFXNMbnw/view?usp=sharing"
@@ -95,16 +115,16 @@ export default function App({ Component, pageProps }) {
             </Button>
           </PressEnterContainer>
         </Link>
-        <Link href={"/"}>
-        <ScrollButtonContainer left>
-          <ScrollHeading>Click</ScrollHeading>
-          <Button>
-            <Span1>
-              <AiOutlineArrowDown style={arrowStyle} />
-            </Span1>
-          </Button>
-        </ScrollButtonContainer>
-      </Link>
+        <Link href={"/skills"}>
+          <ScrollButtonContainer left>
+            <ScrollHeading>Click</ScrollHeading>
+            <Button>
+              <Span1>
+                <AiOutlineArrowDown style={arrowStyle} />
+              </Span1>
+            </Button>
+          </ScrollButtonContainer>
+        </Link>
 
         <Component {...pageProps} />
       </Suspense>

@@ -44,21 +44,9 @@ EarthImg.defaultProps = {
   src: earth
 }
 
-const Earth = () => {
+const Earth = props => {
   const [scroll] = useScroll();
-  console.log("src", scroll);
-  const styles = {
-    backgroundColor: "transparent",
-    width: "100%",
-    height: "300vh",
-    animation: `${(props) =>
-      floatAnim(-(scroll * 360) / 100)} 6s ease-in-out infinite`,
-    transition: "transform 0.3s",
-    zIndex: 999999,
-    // @media screen and (max-width: 720px) {
-    //   width: 80vw;
-    // }
-  };
+  console.log("src", props.angle);
   return (
     <EarthDiv>
       {/* <Image src={earth} style={styles} height={200} width={200} alt="earth" /> */}
