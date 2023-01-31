@@ -52,4 +52,5 @@ html {
   border-radius: 50%;
   background: rgb(237, 232, 93);
   z-index: 9999;
+  position: relative;
 }

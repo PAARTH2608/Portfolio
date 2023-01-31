@@ -19,7 +19,7 @@ export const EarthDiv = styled.div`
   position: absolute;
   bottom: 0%;
   left: 50%;
-  transform: translate(-50%, 35%);
+  transform: translate(-70%, 40%);
   @media screen and (max-width: 720px) {
     top: 100%;
     left: 0vw;
@@ -29,8 +29,8 @@ export const EarthDiv = styled.div`
   background-color: transparent;
 `;
 export const EarthImg = styled.img`
-	width: 100%;
-	height: 100%;
+	width: 140%;
+	height: 140%;
 	animation: ${(props) => floatAnim(props.angle)} 6s ease-in-out infinite;
 	transition: transform 0.3s;
   z-index: 999999;

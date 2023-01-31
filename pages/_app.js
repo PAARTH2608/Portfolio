@@ -27,7 +27,7 @@ export default function App({ Component, pageProps }) {
   const [visible, setIsVisible] = useState(true);
   const styles = {
     backgroundColor: "transparent",
-    cursor: "pointer"
+    cursor: "pointer",
   };
 
   useEffect(() => {
@@ -214,7 +214,7 @@ export default function App({ Component, pageProps }) {
       <Suspense fallback={<PageLoader />}>
         <HelperDiv>
           <ContactMeContainer>
-            <Link href={"/contact"}>
+            <Link href={"/contact"} style={{ background: "transparent" }}>
               <Image
                 src={"/contact.svg"}
                 alt="contact"

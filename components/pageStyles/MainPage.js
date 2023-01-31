@@ -204,13 +204,13 @@ export const Span2 = styled.div`
 export const EarthContainer = styled.div`
   position: fixed;
   transform: translateY(80vh);
-  height: 40vh;
+  height: 50vh;
   width: 100%;
   background-color: transparent;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 30vh;
+  // padding-top: 30vh;
   z-index: 2;
 `;
 export const GlowyEarth = styled.div`
