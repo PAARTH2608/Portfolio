@@ -4,6 +4,7 @@ import { useRouter } from "next/router";
 import Script from "next/script";
 import { Suspense, useEffect, useState } from "react";
 import { AiOutlineArrowDown } from "react-icons/ai";
+import { SiBuymeacoffee } from "react-icons/si";
 import Earth from "../components/Earth/Earth";
 import Socials from "../components/pageComponents/Socials/Socials";
 import PageLoader from "../components/PageLoader";
@@ -17,11 +18,11 @@ import {
   ScrollHeading,
   SocialContainer,
   Span1,
+  Text,
 } from "../components/pageStyles/MainPage";
 import "../styles/globals.css";
 
 export default function App({ Component, pageProps }) {
-  const router = useRouter();
   const [visible, setIsVisible] = useState(true);
   const styles = {
     backgroundColor: "transparent",
@@ -44,25 +45,6 @@ export default function App({ Component, pageProps }) {
     window.addEventListener("scroll", listenToScroll);
     return () => window.removeEventListener("scroll", listenToScroll);
   }, [visible]);
-
-  const [angle, setAngle] = useState();
-  useEffect(() => {
-    const routeChangeStart = (url, { shallow }) => {
-      console.log("start animation");
-    };
-
-    const routeChangeComplete = (url, { shallow }) => {
-      setAngle(25);
-    };
-
-    router.events.on("routeChangeStart", routeChangeStart);
-    router.events.on("routeChangeComplete", routeChangeComplete);
-
-    return () => {
-      router.events.off("routeChangeStart", routeChangeStart);
-      router.events.off("routeChangeComplete", routeChangeComplete);
-    };
-  }, []);
 
   const arrowStyle = {
     position: "absolute",
@@ -213,13 +195,17 @@ export default function App({ Component, pageProps }) {
         <HelperDiv>
           <ContactMeContainer>
             <Link href={"/contact"} style={{ background: "transparent" }}>
-              <Image
+              <Text>
+                Buy Me A Coffee
+                <SiBuymeacoffee style={{ background: "transparent" }} />
+              </Text>
+              {/* <Image
                 src={"/contact.svg"}
                 alt="contact"
                 width={100}
                 height={100}
                 style={styles}
-              />
+              /> */}
             </Link>
           </ContactMeContainer>
         </HelperDiv>
@@ -227,7 +213,7 @@ export default function App({ Component, pageProps }) {
           <Socials />
         </SocialContainer>
         {/* <EarthTransition> */}
-        <EarthContainer>{visible && <Earth angle={angle} />}</EarthContainer>
+        <EarthContainer>{visible && <Earth />}</EarthContainer>
         {/* </EarthTransition> */}
         <Link
           href="https://drive.google.com/file/d/1BhWCzBY6UznMOXy5bOGmj9KxbFXNMbnw/view?usp=sharing"

@@ -44,7 +44,7 @@ EarthImg.defaultProps = {
   src: earth
 }
 
-const Earth = props => {
+const Earth = () => {
   const [scroll] = useScroll();
   return (
     <EarthDiv>

@@ -24,17 +24,28 @@ export const HelperDiv = styled.div`
   align-items: center;
   justify-content: flex-end;
   background-color: transparent;
-  z-index:9999;
-  position: position;
+  z-index: 9999;
+  position: relative;
 `;
 export const ContactMeContainer = styled.div`
   height: 10vh;
-  width: 10%;
+  width: 15%;
   background-color: transparent;
   z-index: 999;
   position: fixed;
+  right: 0;
+  top:0;
   padding-top: 2vh;
   cursor: pointer;
+`;
+export const Text = styled.h2`
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 2rem;
+  color: white;
+  position: absolute;
+  height: 100%;
+  background: transparent;
+  z-index: 999999;
 `;
 export const ClickOpenContainer = styled.div`
   margin-top: 15vh;
