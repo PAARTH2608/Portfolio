@@ -16,28 +16,12 @@ import {
   SkillsContainer,
 } from "../../components/pageStyles/SkillsPage";
 
-const Skills = () => {
+const Skills = props => {
   const styles = {
     backgroundColor: "transparent",
   };
-  const arrowStyle = {
-    position: "absolute",
-    display: "block",
-    top: "29%",
-    left: "35%",
-    width: "18px",
-    height: "18px",
-    margin: "-4px 0 0 -4px",
-    background: "white",
-    "border-radius": "50%",
-    "-webkit-animation": "ani-mouse 2.5s linear infinite",
-    "-moz-animation": "ani-mouse 2.5s linear infinite",
-    animation: "ani-mouse 2.5s linear infinite",
-    color: "#CEB7FF",
-    backgroundColor: "transparent",
-  };
   return (
-    <Container>
+    <Container id={props.id}>
       <Image
         src={"/images/skillsBg.png"}
         alt="background"

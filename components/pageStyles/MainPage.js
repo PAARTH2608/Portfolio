@@ -69,7 +69,20 @@ export const SocialContainer = styled.div`
   align-items: center;
   justify-content: space-between;
   background-color: transparent;
-  z-index: 5;
+  z-index: 9999;
+`;
+export const LinksContainer = styled.div`
+  height: 50vh;
+  width: 10%;
+  position: fixed;
+  right: 0;
+  top: 15%;
+  padding: 1%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: transparent;
+  z-index: 99999;
 `;
 export const PressEnterContainer = styled.div`
   height: 20vh;

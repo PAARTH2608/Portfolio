@@ -15,7 +15,7 @@ import {
   ScrollButtonContainer,
 } from "../../components/pageStyles/MainPage";
 
-const Main = () => {
+const Main = props => {
   const styles = {
     backgroundColor: "transparent",
   };
@@ -52,7 +52,7 @@ const Main = () => {
     backgroundColor: "transparent",
   };
   return (
-    <Container>
+    <Container id={props.id} >
       <Image
         src={"/images/background-1.png"}
         alt="background"

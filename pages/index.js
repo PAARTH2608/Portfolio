@@ -39,11 +39,11 @@ const Home = () => {
       <Head>
         <title>Portfolio</title>
       </Head>
-      <Main />
-      <Skills />
-      <Experience />
-      <Projects />
-      <Contact />
+      <Main id="page1" />
+      <Skills id="page2" />
+      <Experience id="page3" />
+      <Projects id="page4" />
+      <Contact id="page5" />
     </MainContainer>
   );
 };

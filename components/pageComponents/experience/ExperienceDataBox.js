@@ -10,7 +10,7 @@ const Container = styled.div`
   justify-content: space-around;
   border: 1px solid #ceb7ff;
   background-color: rgba(0, 0, 0, 0.5);
-  padding: 2%;
+  padding: 3%;
 `;
 const Content = styled.p`
   background-color: transparent;

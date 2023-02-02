@@ -24,7 +24,7 @@ const HelperDiv = styled.div`
 
 const ExperienceElements = () => {
   const styles = {
-    backgroundColor: "transparent",
+    background: "transparent !important",
     height: "100%",
     width: "100%",
   };

@@ -1,7 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from "next/router";
-import Script from "next/script";
 import { Suspense, useEffect, useState } from "react";
 import { AiOutlineArrowDown } from "react-icons/ai";
 import { SiBuymeacoffee } from "react-icons/si";
@@ -13,25 +11,22 @@ import {
   ContactMeContainer,
   EarthContainer,
   HelperDiv,
+  LinksContainer,
   PressEnterContainer,
-  ScrollButtonContainer,
   ScrollHeading,
   SocialContainer,
   Span1,
   Text,
 } from "../components/pageStyles/MainPage";
+import Links from "../components/pageComponents/Global/Links";
 import "../styles/globals.css";
 
 export default function App({ Component, pageProps }) {
   const [visible, setIsVisible] = useState(true);
-  const styles = {
-    backgroundColor: "transparent",
-    cursor: "pointer",
-  };
 
   useEffect(() => {
     const listenToScroll = () => {
-      let heightToHideFrom = 2240;
+      let heightToHideFrom = 2370;
       const winScroll =
         document.body.scrollTop || document.documentElement.scrollTop;
 
@@ -199,22 +194,13 @@ export default function App({ Component, pageProps }) {
                 Buy Me A Coffee
                 <SiBuymeacoffee style={{ background: "transparent" }} />
               </Text>
-              {/* <Image
-                src={"/contact.svg"}
-                alt="contact"
-                width={100}
-                height={100}
-                style={styles}
-              /> */}
             </Link>
           </ContactMeContainer>
         </HelperDiv>
         <SocialContainer>
           <Socials />
         </SocialContainer>
-        {/* <EarthTransition> */}
         <EarthContainer>{visible && <Earth />}</EarthContainer>
-        {/* </EarthTransition> */}
         <Link
           href="https://drive.google.com/file/d/1BhWCzBY6UznMOXy5bOGmj9KxbFXNMbnw/view?usp=sharing"
           passHref
@@ -229,18 +215,10 @@ export default function App({ Component, pageProps }) {
             </Button>
           </PressEnterContainer>
         </Link>
-        <Link href={"/skills"}>
-          <ScrollButtonContainer left>
-            <ScrollHeading>Click</ScrollHeading>
-            <Button>
-              <Span1>
-                <AiOutlineArrowDown style={arrowStyle} />
-              </Span1>
-            </Button>
-          </ScrollButtonContainer>
-        </Link>
         {/* <canvas id="stars"></canvas> */}
-
+        <LinksContainer>
+          <Links />
+        </LinksContainer>
         <Component {...pageProps} />
       </Suspense>
     </>

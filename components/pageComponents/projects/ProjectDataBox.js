@@ -12,7 +12,7 @@ const Container = styled.div`
   align-items: center;
   justify-content: space-around;
   border: 1px solid #ceb7ff;
-  padding: 2%;
+  padding: 3%;
   padding-bottom: 4%;
   background-color: rgba(0, 0, 0, 0.5);
 `;

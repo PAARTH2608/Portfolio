@@ -6,14 +6,14 @@
   background-color: #000;
 }
 body {
-  overflow-x: hidden;
-}
-html {
-  scroll-snap-type: y mandatory;
+  overflow: hidden;
 }
 ::-webkit-scrollbar {
   width: 0px;
   background: transparent; /* make scrollbar transparent */
+}
+.swiper-wrapper{
+  background: transparent;
 }
 .swiper-button-next {
   background-image: url(/rightArrow.svg);
