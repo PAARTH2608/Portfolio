@@ -1,22 +1,11 @@
-import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import { AiOutlineArrowDown } from "react-icons/ai";
 import ContactElement from "../../components/pageComponents/Contact/ContactElement";
 import {
   Container,
   InformationContainer,
-  ContactMeContainer,
-  HelperDiv,
   ContentContainer,
-  GoBack,
 } from "../../components/pageStyles/Contact";
-import {
-  Button,
-  ScrollButtonContainer,
-  ScrollHeading,
-  Span1,
-} from "../../components/pageStyles/MainPage";
 
 const Contact = () => {
   const styles = {
@@ -49,11 +38,6 @@ const Contact = () => {
           objectPosition: "center",
         }}
       />
-      <HelperDiv>
-        <ContactMeContainer>
-          <GoBack>Go Back</GoBack>
-        </ContactMeContainer>
-      </HelperDiv>
       <InformationContainer>
         <Image
           src={"/contactInfo.svg"}
@@ -66,16 +50,6 @@ const Contact = () => {
           <ContactElement />
         </ContentContainer>
       </InformationContainer>
-      {/* <Link href={"/"}>
-        <ScrollButtonContainer left>
-          <ScrollHeading>Click</ScrollHeading>
-          <Button>
-            <Span1>
-              <AiOutlineArrowDown style={arrowStyle} />
-            </Span1>
-          </Button>
-        </ScrollButtonContainer>
-      </Link> */}
     </Container>
   );
 };

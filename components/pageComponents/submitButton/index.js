@@ -2,37 +2,24 @@ import { useState } from "react";
 import ReactiveButton from "reactive-button";
 import styled from "styled-components";
 
+const BTN = styled.button`
+  background-color: #9361ff;
+  outline: none;
+  border: none;
+  height: 5vh;
+  width: 82%;
+  margin-left: 18%;
+  color: white;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.3rem;
+  border-radius: 5px;
+`;
 const Button = () => {
-  const Text = styled.h3`
-    background-color: transparent;
-  `;
-  const [state, setState] = useState("idle");
+  
 
-  const onClickHandler = () => {
-    setState("loading");
-
-    // send an HTTP request
-    setTimeout(() => {
-      setState("success");
-    }, 2000);
-  };
-
-  const style = {
-    backgroundColor: "#CEB7FF",
-  };
-
-  return (
-    <ReactiveButton
-      buttonState={state}
-      idleText={<Text>Send</Text>}
-      loadingText={<Text>Loading</Text>}
-      successText={<Text>Sent</Text>}
-      onClick={onClickHandler}
-      size="large"
-    //   shadow
-      style={style}
-    />
-  );
+  return <BTN
+    type="submit"
+  >{state}</BTN>;
 };
 
 export default Button;

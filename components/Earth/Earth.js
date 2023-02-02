@@ -46,7 +46,6 @@ EarthImg.defaultProps = {
 
 const Earth = props => {
   const [scroll] = useScroll();
-  console.log("src", props.angle);
   return (
     <EarthDiv>
       {/* <Image src={earth} style={styles} height={200} width={200} alt="earth" /> */}
