@@ -23,7 +23,7 @@ export const experience = [
   {
     id: 4,
     title: "DIGA CAR RENTALS",
-    date: "AUG 2021 TO OCT 2023",
+    date: "AUG 2021 TO OCT 2021",
     about:
       "Developed the admin side website for DIGA car rentals which helps in managing the renters and users. Implemeted react libraries like redux saga for state management. It was my first experience as a frontend developer developing the website with large codebase.",
   },
