@@ -37,7 +37,7 @@ const Home = () => {
         }}
       />
       <Head>
-        <title>Portfolio</title>
+        <title>Paarth Jain</title>
       </Head>
       <Main id="page1" />
       <Skills id="page2" />
