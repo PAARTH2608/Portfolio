@@ -202,7 +202,7 @@ export default function App({ Component, pageProps }) {
         </SocialContainer>
         <EarthContainer>{visible && <Earth />}</EarthContainer>
         <Link
-          href="https://drive.google.com/file/d/1BhWCzBY6UznMOXy5bOGmj9KxbFXNMbnw/view?usp=sharing"
+          href="https://drive.google.com/file/d/17rZEn9e_wD7J-baKTZ15yadNGKmwbdF8/view?usp=sharing"
           passHref
           target="_blank"
         >

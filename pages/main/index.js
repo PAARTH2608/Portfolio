@@ -18,6 +18,11 @@ import {
 const Main = props => {
   const styles = {
     backgroundColor: "transparent",
+
+    "@media (max-width: 1280px)" : {
+      width: "100%",
+      height: "100%",
+    }
   };
   const styles1 = {
     backgroundColor: "transparent",
@@ -34,22 +39,6 @@ const Main = props => {
     position: "absolute",
     right: "0",
     bottom: "0",
-  };
-  const arrowStyle = {
-    position: "absolute",
-    display: "block",
-    top: "29%",
-    left: "35%",
-    width: "18px",
-    height: "18px",
-    margin: "-4px 0 0 -4px",
-    background: "white",
-    "border-radius": "50%",
-    "-webkit-animation": "ani-mouse 2.5s linear infinite",
-    "-moz-animation": "ani-mouse 2.5s linear infinite",
-    animation: "ani-mouse 2.5s linear infinite",
-    color: "#CEB7FF",
-    backgroundColor: "transparent",
   };
   return (
     <Container id={props.id} >
