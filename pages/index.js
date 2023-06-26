@@ -40,10 +40,10 @@ const Home = () => {
         <title>Paarth Jain</title>
       </Head>
       <Main id="page1" />
-      {/* <Skills id="page2" />
+      <Skills id="page2" />
       <Experience id="page3" />
       <Projects id="page4" />
-      <Contact id="page5" /> */}
+      <Contact id="page5" />
     </MainContainer>
   );
 };
