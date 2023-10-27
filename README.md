@@ -11,7 +11,7 @@
     <img src="https://res.cloudinary.com/dcogm6vx9/image/upload/v1675374436/Screenshot_2023-02-03_031201_hiv3dr.png" alt="project pic" width="1140" height="426">
   </a>
  
-  Website Link: [Portfolio](https://portfolio-paarth.vercel.app/)
+  Website Link: [Portfolio](https://its-paarth7.vercel.app/)
   </p>
 </p>
 
