@@ -16,7 +16,7 @@ const Content = styled.p`
   background-color: transparent;
   font-size: 1.3rem;
   height: 100%;
-  font-family: Montserrat, sans-serif;
+  fontFamily: Montserrat, sans-serif;
 `;
 const ExperienceDataBox = (props) => {
 

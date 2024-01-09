@@ -20,7 +20,7 @@ export const EarthDiv = styled.div`
   bottom: 0%;
   left: 50%;
   transform: translate(-70%, 40%);
-  @media screen and (max-width: 720px) {
+  @media screen and (MaxWidth: 720px) {
     top: 100%;
     left: 0vw;
     transform: translate(35%, 50%);
@@ -36,7 +36,7 @@ export const EarthImg = styled.img`
   z-index: 999999;
   background-color: transparent;
 
-	@media screen and (max-width: 720px) {
+	@media screen and (MaxWidth: 720px) {
 		width: 80vw;
 	}
 `;
@@ -49,7 +49,7 @@ const Earth = () => {
   return (
     <EarthDiv>
       {/* <Image src={earth} style={styles} height={200} width={200} alt="earth" /> */}
-      <EarthImg src="/earth.svg" angle={-(scroll * 360) / 100} />
+      <EarthImg src="/earth.svg" angle={-(scroll * 365) / 100} />
     </EarthDiv>
   );
 };

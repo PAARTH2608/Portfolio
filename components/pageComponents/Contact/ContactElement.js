@@ -89,7 +89,7 @@ const BTN = styled.button`
   cursor: pointer;
 
   &:disabled {
-    background-color: #CEB7FF;
+    background-color: #ceb7ff;
     color: white;
     cursor: not-allowed;
   }
@@ -106,6 +106,7 @@ const ContactElement = () => {
   const [message, setMessage] = useState("");
 
   const sendEmail = (email, subject, message) => {
+    console.log(email, subject, message);
     emailjs
       .send(
         process.env.SERVICE_ID,
@@ -129,6 +130,9 @@ const ContactElement = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     sendEmail(email, subject, message);
+    setEmail("");
+    setSubject("");
+    setMessage("");
   };
   return (
     <Container>

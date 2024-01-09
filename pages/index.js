@@ -21,21 +21,21 @@ const MainContainer = styled.div`
 
 const Home = () => {
   const ref = useRef(null);
-  const { x, y } = useFollowPointer(ref);
+  // const { x, y } = useFollowPointer(ref);
 
   return (
     <MainContainer>
-      <motion.div
+      {/* <motion.div
         ref={ref}
         className="box"
         animate={{ x, y }}
         transition={{
           type: "spring",
           damping: 3,
-          stiffness: 50,
+          stiffness: 100,
           restDelta: 0.001,
         }}
-      />
+      /> */}
       <Head>
         <title>Paarth Jain</title>
       </Head>

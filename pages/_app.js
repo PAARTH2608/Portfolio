@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { Suspense, useEffect, useState } from "react";
 import { AiOutlineArrowDown } from "react-icons/ai";
@@ -6,6 +5,7 @@ import { SiBuymeacoffee } from "react-icons/si";
 import Earth from "../components/Earth/Earth";
 import Socials from "../components/pageComponents/Socials/Socials";
 import PageLoader from "../components/PageLoader";
+import { motion } from "framer-motion";
 import {
   Button,
   ContactMeContainer,
@@ -20,9 +20,20 @@ import {
 } from "../components/pageStyles/MainPage";
 import Links from "../components/pageComponents/Global/Links";
 import "../styles/globals.css";
+import Image from "next/image";
 
 export default function App({ Component, pageProps }) {
   const [visible, setIsVisible] = useState(true);
+
+  const [showModal, setShowModal] = useState(false);
+
+  const handleBuyCoffeeClick = () => {
+    setShowModal(true);
+  };
+
+  const handleCloseModal = () => {
+    setShowModal(false);
+  };
 
   useEffect(() => {
     const listenToScroll = () => {
@@ -50,9 +61,9 @@ export default function App({ Component, pageProps }) {
     height: "18px",
     margin: "-4px 0 0 -4px",
     background: "white",
-    "border-radius": "50%",
-    "-webkit-animation": "ani-mouse 2.5s linear infinite",
-    "-moz-animation": "ani-mouse 2.5s linear infinite",
+    borderRadius: "50%",
+    WebkitAnimation: "ani-mouse 2.5s linear infinite",
+    MozAnimation: "ani-mouse 2.5s linear infinite",
     animation: "ani-mouse 2.5s linear infinite",
     color: "#CEB7FF",
     backgroundColor: "transparent",
@@ -63,20 +74,47 @@ export default function App({ Component, pageProps }) {
       <Suspense fallback={<PageLoader />}>
         <HelperDiv>
           <ContactMeContainer>
-            <Link href={"/contact"} style={{ background: "transparent" }}>
-              <Text>
-                Buy Me A Coffee
-                <SiBuymeacoffee style={{ background: "transparent" }} />
-              </Text>
-            </Link>
+            <motion.div whileHover={{ scale: 1.2 }}>
+              <Text onClick={handleBuyCoffeeClick}>Buy Me A Coffee</Text>
+            </motion.div>
           </ContactMeContainer>
         </HelperDiv>
+        {showModal && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            style={{
+              position: "fixed",
+              top: 0,
+              left: 0,
+              width: "100%",
+              height: "100%",
+              backgroundColor: "rgba(0, 0, 0, 0.9)",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              zIndex: 9999,
+            }}
+            onClick={handleCloseModal}
+          >
+            {/* Replace 'yourQrCodeImage.jpg' with your actual QR code image */}
+            <Image
+              src="/qrcode.png"
+              alt="QR Code"
+              style={{ maxWidth: "80%", maxHeight: "80%", borderRadius: "8px" }}
+              width={500}
+              height={500}
+            />
+          </motion.div>
+        )}
         <SocialContainer>
           <Socials />
         </SocialContainer>
         <EarthContainer>{visible && <Earth />}</EarthContainer>
         <Link
-          href="https://drive.google.com/file/d/17rZEn9e_wD7J-baKTZ15yadNGKmwbdF8/view?usp=sharing"
+          href="https://drive.google.com/file/d/1w9D6hB1m91HlECguuGRFpPI9Z9_ffk9b/view?usp=sharing"
           passHref
           target="_blank"
         >

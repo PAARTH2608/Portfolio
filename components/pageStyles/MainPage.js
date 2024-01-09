@@ -16,7 +16,7 @@ export const InformationContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-between;
   z-index: 999;
 `;
 export const HelperDiv = styled.div`
@@ -48,9 +48,8 @@ export const Text = styled.h2`
   z-index: 999999;
 `;
 export const ClickOpenContainer = styled.div`
-  margin-top: 15vh;
   position: relative;
-  height: 27vh;
+  height: 50vh;
   width: 33%;
   background-color: transparent;
   z-index: 2;

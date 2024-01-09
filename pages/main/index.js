@@ -1,5 +1,7 @@
+import { useState } from "react";
 import Head from "next/head";
 import Image from "next/image";
+import { motion } from "framer-motion";
 import Link from "next/link";
 import { AiOutlineArrowDown } from "react-icons/ai";
 import {
@@ -15,33 +17,59 @@ import {
   ScrollButtonContainer,
 } from "../../components/pageStyles/MainPage";
 
-const Main = props => {
+export const overlayStyle = {
+  position: "absolute",
+  top: 0,
+  left: 0,
+  width: "100%",
+  height: "100%",
+  backgroundColor: "rgba(0, 0, 0, 0.3)",
+};
+const Main = (props) => {
   const styles = {
     backgroundColor: "transparent",
 
-    "@media (max-width: 1280px)" : {
+    "@media (MaxWidth: 1280px)": {
       width: "100%",
       height: "100%",
-    }
+    },
   };
+
+  const container = {
+    hidden: { opacity: 1, scale: 0 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        delayChildren: 0.3,
+        staggerChildren: 0.2,
+      },
+    },
+  };
+  const item = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+    },
+  };
+
   const styles1 = {
     backgroundColor: "transparent",
     width: "85%",
+    cursor: "pointer",
   };
-  const leftBorderStyle = {
+  const styles2 = {
     backgroundColor: "transparent",
-    position: "absolute",
-    left: "0",
-    top: "0",
+    cursor: "pointer",
   };
-  const rightBorderStyle = {
-    backgroundColor: "transparent",
-    position: "absolute",
-    right: "0",
-    bottom: "0",
+
+  const [toggle, setToggle] = useState(true);
+  const openHandler = () => {
+    setToggle((toggle) => !toggle);
   };
   return (
-    <Container id={props.id} >
+    <Container id={props.id}>
       <Image
         src={"/images/background-1.png"}
         alt="background"
@@ -51,55 +79,56 @@ const Main = props => {
           objectPosition: "center",
         }}
       />
+      <div style={overlayStyle}></div>
       <InformationContainer>
         <Image
           src={"/infoMainPage.svg"}
-          height={400}
+          height={250}
           width={700}
           alt="mainbgimg"
           style={styles}
         />
         <ClickOpenContainer>
-          <Image
-            src={"/leftBorder.svg"}
-            alt="leftBorder"
-            height={50}
-            width={50}
-            style={leftBorderStyle}
-          />
-          {/* <Image
-            src={"/click.svg"}
-            alt="leftBorder"
-            height={120}
-            width={120}
-            style={styles}
-          /> */}
-          <Image
-            src={"/information.svg"}
-            alt="leftBorder"
-            height={400}
-            width={400}
-            style={styles1}
-          />
-          <Image
-            src={"/rightBorder.svg"}
-            alt="leftBorder"
-            height={50}
-            width={50}
-            style={rightBorderStyle}
-          />
+          {toggle && (
+            <motion.div
+              initial={{ scale: 1 }}
+              animate={{ scale: toggle ? 1 : 0 }}
+              transition={{ duration: 5 }}
+              onClick={openHandler}
+              style={{
+                backgroundColor: "transparent",
+              }}
+            >
+              <Image
+                src={"/clicktoopen.svg"}
+                alt="leftBorder"
+                height={100}
+                width={100}
+                style={styles1}
+              />
+            </motion.div>
+          )}
+          {!toggle && (
+            <motion.div
+              initial={{ scale: 0 }}
+              animate={{ scale: toggle ? 0 : 1 }}
+              transition={{ duration: 0.3 }}
+              onClick={openHandler}
+              style={{
+                backgroundColor: "transparent",
+              }}
+            >
+              <Image
+                src={"/mainpageinfo.svg"}
+                alt="leftBorder"
+                height={400}
+                width={600}
+                style={styles2}
+              />
+            </motion.div>
+          )}
         </ClickOpenContainer>
       </InformationContainer>
-      {/* <Link href={"/skills"}>
-        <ScrollButtonContainer left>
-          <ScrollHeading>Click</ScrollHeading>
-          <Button>
-            <Span1>
-              <AiOutlineArrowDown style={arrowStyle} />
-            </Span1>
-          </Button>
-        </ScrollButtonContainer>
-      </Link> */}
     </Container>
   );
 };

@@ -4,8 +4,6 @@ export function useFollowPointer(ref) {
   const [point, setPoint] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
-    // if (!ref.current) return;
-
     const handlePointerMove = ({ clientX, clientY }) => {
       const element = ref.current;
 

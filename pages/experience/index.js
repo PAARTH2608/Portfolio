@@ -16,6 +16,7 @@ import ExperienceElements from "../../components/pageComponents/experience/Exper
 import { AiOutlineArrowDown } from "react-icons/ai";
 import Head from "next/head";
 import Link from "next/link";
+import { overlayStyle } from "../main";
 
 const Experience = props => {
   const styles = {
@@ -32,6 +33,7 @@ const Experience = props => {
           objectPosition: "center",
         }}
       />
+      <div style={overlayStyle}></div>
       <InformationContainer>
         <Image
           src={"/experienceInfo.svg"}

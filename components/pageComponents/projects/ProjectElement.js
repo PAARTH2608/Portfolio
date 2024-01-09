@@ -13,6 +13,12 @@ const Container = styled.div`
   width: 100%;
 `;
 
+const HeadingDiv = styled.div`
+  width: 100%;
+  background-color: transparent;
+  padding: 0 10%;
+`;
+
 const ProjectElements = () => {
   const styles = {
     backgroundColor: "transparent",
@@ -26,24 +32,25 @@ const ProjectElements = () => {
     alignItems: "center",
     justifyContent: "space-around",
     backgroundColor: "transparent",
-    "font-family": "Bebas Neue",
-    "font-size": "3rem",
+    fontFamily: "Bebas Neue",
+    fontSize: "3rem",
     color: "#fff",
     display: "flex",
-    "flex-direction": "column",
+    flexDirection: "column",
   };
-  
+
   return (
     <Container>
-      <Swiper
-        navigation={true}
-        modules={[Navigation]}
-        style={styles}
-      >
+      <Swiper navigation={true} modules={[Navigation]} style={styles}>
         {projects.map((project) => (
           <SwiperSlide key={project.id} style={styles1}>
-            {project.title}
-            <ProjectDataBox content={project.content} link={project.link} />
+            <HeadingDiv>{project.title}</HeadingDiv>
+            <ProjectDataBox
+              content={project.content}
+              link={project.link}
+              tech={project.tech}
+              deployment={project.deployment}
+            />
           </SwiperSlide>
         ))}
       </Swiper>

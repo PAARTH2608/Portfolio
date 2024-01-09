@@ -13,13 +13,22 @@ const Container = styled.div`
   width: 100%;
   z-index: 3;
 `;
+
+const HeadingContainer = styled.div`
+  width: 100%;
+`;
 const Heading = styled.h3`
   font-size: 1.8rem;
   background-color: transparent;
-  font-family: "Bebas Neue", sans-serif;
+  fontFamily: "Bebas Neue", sans-serif;
 `;
 const HelperDiv = styled.div`
   background-color: transparent;
+  width: 100%;
+  display:flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0 10%;
 `;
 
 const ExperienceElements = () => {
@@ -36,12 +45,12 @@ const ExperienceElements = () => {
     alignItems: "center",
     justifyContent: "space-around",
     backgroundColor: "rgba(255, 0, 0, 0)",
-    "font-family": "Bebas Neue",
-    "font-size": "3rem",
+    fontFamily: "Bebas Neue",
+    fontSize: "3rem",
     color: "#fff",
     display: "flex",
-    "flex-direction": "column",
-    "text-align": "center",
+    flexDirection: "column",
+    textAlign: "center",
   };
   return (
     <Container>
@@ -51,6 +60,7 @@ const ExperienceElements = () => {
             <HelperDiv>
               {exp.title}
               <br />
+              {/* <HeadingContainer></HeadingContainer> */}
               <Heading>{exp.date}</Heading>
             </HelperDiv>
             <ProjectDataBox about={exp.about} />

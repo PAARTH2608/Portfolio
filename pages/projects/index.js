@@ -5,6 +5,7 @@ import {
   ContentContainer,
 } from "../../components/pageStyles/ProjectsContainers";
 import ProjectElements from "../../components/pageComponents/projects/ProjectElement";
+import { overlayStyle } from "../main";
 
 
 const Projects = props => {
@@ -22,7 +23,7 @@ const Projects = props => {
           objectPosition: "center",
         }}
       />
-      
+      {/* <div style={overlayStyle}></div> */}
       <InformationContainer>
         <Image
           src={"/projectsInfo.svg"}
@@ -35,16 +36,6 @@ const Projects = props => {
           <ProjectElements />
         </ContentContainer>
       </InformationContainer>
-      {/* <Link href={"/contact"}>
-        <ScrollButtonContainer left>
-          <ScrollHeading>Click</ScrollHeading>
-          <Button>
-            <Span1>
-              <AiOutlineArrowDown style={arrowStyle} />
-            </Span1>
-          </Button>
-        </ScrollButtonContainer>
-      </Link> */}
     </Container>
   );
 };

@@ -6,6 +6,7 @@ import {
   InformationContainer,
   ContentContainer,
 } from "../../components/pageStyles/Contact";
+import { overlayStyle } from "../main";
 
 const Contact = props => {
   const styles = {
@@ -22,6 +23,7 @@ const Contact = props => {
           objectPosition: "center",
         }}
       />
+      {/* <div style={overlayStyle}></div> */}
       <InformationContainer>
         <Image
           src={"/contactInfo.svg"}

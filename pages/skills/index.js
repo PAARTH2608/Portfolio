@@ -15,6 +15,7 @@ import {
   Heading,
   SkillsContainer,
 } from "../../components/pageStyles/SkillsPage";
+import { overlayStyle } from "../main";
 
 const Skills = props => {
   const styles = {
@@ -31,7 +32,7 @@ const Skills = props => {
           objectPosition: "center",
         }}
       />
-      
+      <div style={overlayStyle}></div>
       <InformationContainer>
         <Image
           src={"/skillsInfo.svg"}
@@ -45,16 +46,6 @@ const Skills = props => {
           <SkillElements />
         </SkillsContainer>
       </InformationContainer>
-      {/* <Link href={"/experience"}>
-        <ScrollButtonContainer left>
-          <ScrollHeading>Click</ScrollHeading>
-          <Button>
-            <Span1>
-              <AiOutlineArrowDown style={arrowStyle} />
-            </Span1>
-          </Button>
-        </ScrollButtonContainer>
-      </Link> */}
     </Container>
   );
 };

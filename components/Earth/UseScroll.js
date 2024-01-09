@@ -14,7 +14,7 @@ export const useScroll = () => {
 				document.documentElement.clientHeight
 			);
 		};
-		const scrollTop = window.pageYOffset; // how much the user has scrolled by
+		const scrollTop = window.pageYOffset;
 		const winHeight = window.innerHeight;
 		const docHeight = getDocHeight();
 		const totalDocScrollLength = docHeight - winHeight;
