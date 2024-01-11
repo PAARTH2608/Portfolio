@@ -17,6 +17,16 @@ const HeadingDiv = styled.div`
   width: 100%;
   background-color: transparent;
   padding: 0 10%;
+
+  @media only screen and (max-width: 1040px) {
+    font-size: 2.3rem;
+  }
+  @media only screen and (max-width: 740px) {
+    font-size: 2rem;
+  }
+  @media only screen and (max-width: 740px) {
+    font-size: 1.6rem;
+  }
 `;
 
 const ProjectElements = () => {
@@ -30,7 +40,7 @@ const ProjectElements = () => {
     width: "100%",
     display: "flex",
     alignItems: "center",
-    justifyContent: "space-around",
+    justifyContent: "center",
     backgroundColor: "transparent",
     fontFamily: "Bebas Neue",
     fontSize: "3rem",

@@ -13,10 +13,10 @@ import { useFollowPointer } from "../framer/useFollowPointer";
 const MainContainer = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: flex-start;
   background-color: #1e1e1e;
-  height: fit-content;
+  height: 500vh;
 `;
 
 const Home = () => {

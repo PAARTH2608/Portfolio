@@ -17,38 +17,36 @@ const floatAnim = (angle) => keyframes`
 `;
 export const EarthDiv = styled.div`
   position: absolute;
-  bottom: 0%;
-  left: 50%;
-  transform: translate(-70%, 40%);
-  @media screen and (MaxWidth: 720px) {
-    top: 100%;
-    left: 0vw;
-    transform: translate(35%, 50%);
-    transition: transform 1s linear;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: transparent;
 `;
 export const EarthImg = styled.img`
-	width: 140%;
-	height: 140%;
-	animation: ${(props) => floatAnim(props.angle)} 6s ease-in-out infinite;
-	transition: transform 0.3s;
+  width: 70%;
+  height: 70%;
+  animation: ${(props) => floatAnim(props.angle)} 6s ease-in-out infinite;
+  transition: transform 0.3s;
   z-index: 999999;
   background-color: transparent;
 
-	@media screen and (MaxWidth: 720px) {
-		width: 80vw;
-	}
+  @media screen and (max-width: 1320px) {
+    width: 90%;
+    height: 90%;
+  }
+  @media screen and (max-width: 1080px) {
+    width: 150%;
+    height: 150%;
+  }
 `;
 EarthImg.defaultProps = {
-  src: earth
-}
+  src: earth,
+};
 
 const Earth = () => {
   const [scroll] = useScroll();
   return (
     <EarthDiv>
-      {/* <Image src={earth} style={styles} height={200} width={200} alt="earth" /> */}
       <EarthImg src="/earth.svg" angle={-(scroll * 365) / 100} />
     </EarthDiv>
   );

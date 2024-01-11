@@ -14,7 +14,7 @@ export const experience = [
       "Web dev mentor at OROM which is under VIT incubation cell. Working on improving the UI of the website along with training the interns for developing the website. Task is to take the regular session of the interns and training them to develop the basic website.",
   },
   {
-    id: 1,
+    id: 3,
     title: "Frontend Developer - SpiritSwap v2",
     date: "MAY 2022 TO AUG 2022",
     about:
@@ -28,7 +28,7 @@ export const experience = [
       "Developed the admin side website for DIGA car rentals which helps in managing the renters and users. Implemeted react libraries like redux saga for state management. It was my first experience as a frontend developer developing the website with large codebase.",
   },
   {
-    id: 3,
+    id: 5,
     title: "Web Dev Lead - RoboVITics",
     date: "JAN 2022 TO JAN 2023",
     about:

@@ -68,6 +68,22 @@ export default function App({ Component, pageProps }) {
     animation: "ani-mouse 2.5s linear infinite",
     color: "#CEB7FF",
     backgroundColor: "transparent",
+
+    "@media only screen and (maxWidth: 1920px)": {
+      width: "14px",
+      height: "14px",
+    },
+    "@media only screen and (maxWidth: 1520px)": {
+      width: "10px",
+      height: "10px",
+      margin: "-2px 0 0 -2px",
+      left: "25%",
+    },
+    "@media only screen and (maxWidth: 1000px)": {
+      width: "10px",
+      height: "10px",
+      margin: "-1px 0 0 -1px",
+    },
   };
 
   return (
@@ -76,7 +92,11 @@ export default function App({ Component, pageProps }) {
         <HelperDiv>
           <ContactMeContainer>
             <motion.div whileHover={{ scale: 1.2 }}>
-              <Text onClick={handleBuyCoffeeClick}>Buy Me A Coffee</Text>
+              <Text
+                onClick={handleBuyCoffeeClick}
+              >
+                Buy Me A Coffee
+              </Text>
             </motion.div>
           </ContactMeContainer>
         </HelperDiv>
@@ -100,7 +120,6 @@ export default function App({ Component, pageProps }) {
             }}
             onClick={handleCloseModal}
           >
-            {/* Replace 'yourQrCodeImage.jpg' with your actual QR code image */}
             <Image
               src="/qrcode.png"
               alt="QR Code"
@@ -113,7 +132,9 @@ export default function App({ Component, pageProps }) {
         <SocialContainer>
           <Socials />
         </SocialContainer>
-        <EarthContainer>{visible && <Earth />}</EarthContainer>
+        <EarthContainer>
+          {visible && <Earth />}
+          </EarthContainer>
         <Link
           href="https://drive.google.com/file/d/1w9D6hB1m91HlECguuGRFpPI9Z9_ffk9b/view?usp=sharing"
           passHref

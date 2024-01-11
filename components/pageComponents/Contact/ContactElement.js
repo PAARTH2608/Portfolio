@@ -18,6 +18,10 @@ const RowDiv = styled.div`
   align-items: center;
   justify-content: center;
   margin-bottom: 5vh;
+
+  @media only screen and (max-width: 1020px) {
+    width:100%;
+  }
 `;
 const RowDiv2 = styled.div`
   background-color: transparent;
@@ -26,6 +30,10 @@ const RowDiv2 = styled.div`
   display: flex;
   align-items: flex-start;
   margin-bottom: 3vh;
+
+  @media only screen and (max-width: 1020px) {
+    width:100%;
+  }
 `;
 const Label = styled.label`
   background-color: transparent;
@@ -37,6 +45,13 @@ const Label = styled.label`
   justify-content: flex-end;
   margin-right: 5%;
   font-size: 1.5rem;
+
+  @media only screen and (max-width: 840px) {
+    font-size: 1.2rem;
+  };
+  @media only screen and (max-width: 670px) {
+    font-size: 1rem;
+  }
 `;
 const Input = styled.input`
   background-color: transparent;
@@ -138,7 +153,7 @@ const ContactElement = () => {
     <Container>
       <Form onSubmit={handleSubmit}>
         <RowDiv>
-          <Label htmlFor="email">EMAIL : </Label>
+          <Label htmlFor="email">EMAIL: </Label>
           <Input
             type="email"
             name="email"

@@ -1,6 +1,4 @@
-import Head from "next/head";
 import Image from "next/image";
-import Link from "next/link";
 import { AiOutlineArrowDown } from "react-icons/ai";
 import SkillElements from "../../components/pageComponents/Skills/SkillElements";
 import {
@@ -40,6 +38,7 @@ const Skills = props => {
           width={500}
           alt="mainbgimg"
           style={styles}
+          className="introImg"
         />
         <Heading> HERE ARE THE LIST OF MY SKILLS</Heading>
         <SkillsContainer>

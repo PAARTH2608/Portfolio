@@ -41,21 +41,12 @@ const Experience = props => {
           width={500}
           alt="mainbgimg"
           style={styles}
+          className="introImg"
         />
         <ContentContainer>
           <ExperienceElements />
         </ContentContainer>
       </InformationContainer>
-      {/* <Link href={"/projects"}>
-        <ScrollButtonContainer left>
-          <ScrollHeading>Click</ScrollHeading>
-          <Button>
-            <Span1>
-              <AiOutlineArrowDown style={arrowStyle} />
-            </Span1>
-          </Button>
-        </ScrollButtonContainer>
-      </Link> */}
     </Container>
   );
 };

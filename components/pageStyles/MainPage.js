@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   display: flex;
   align-items: flex-start;
   justify-content: center;
@@ -34,7 +34,7 @@ export const ContactMeContainer = styled.div`
   z-index: 999;
   position: fixed;
   right: 0;
-  top:0;
+  top: 0;
   padding-top: 2vh;
   cursor: pointer;
 `;
@@ -46,6 +46,16 @@ export const Text = styled.h2`
   height: 100%;
   background: transparent;
   z-index: 999999;
+
+  @media only screen and (max-width: 1340px) {
+    font-size: 1.5rem;
+  }
+  @media only screen and (max-width: 900px) {
+    font-size: 1rem;
+  }
+  @media only screen and (max-width: 600px) {
+    font-size: 0.8rem;
+  }
 `;
 export const ClickOpenContainer = styled.div`
   position: relative;
@@ -56,6 +66,11 @@ export const ClickOpenContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media only screen and (max-width: 900px) {
+    width:80%;
+    height: 60vh;
+  }
 `;
 export const SocialContainer = styled.div`
   height: 50vh;
@@ -88,13 +103,13 @@ export const PressEnterContainer = styled.div`
   width: 8%;
   background-color: transparent;
   position: fixed;
-  left: 50px;
+  left: 25px;
   bottom: 50px;
   padding: 1%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   border-radius: 10px;
   z-index: 9999;
 `;
@@ -126,10 +141,23 @@ export const ScrollHeading = styled.div`
   font-size: 1.3rem;
   font-weight: 600;
   background-color: transparent;
+
+  @media only screen and (max-width: 1920px) {
+    font-size: 30px;
+  }
+  @media only screen and (max-width: 1540px) {
+    font-size: 25px;
+  }
+  @media only screen and (max-width: 1200px) {
+    font-size: 20px;
+  }
+  @media only screen and (max-width: 700px) {
+    font-size: 15px;
+  }
 `;
 export const Button = styled.div`
   background-color: transparent;
-`; // a
+`;
 export const Span1 = styled.div`
   background-color: transparent;
   @-webkit-keyframes ani-mouse {
@@ -208,7 +236,21 @@ export const Span1 = styled.div`
   box-sizing: border-box;
   border: 3px solid #ceb7ff;
   border-radius: 23px;
-`; // mouse
+
+  @media only screen and (max-width: 1540px) {
+    height: 50px;
+    width: 30px;
+  }
+  @media only screen and (max-width: 1200px) {
+    height: 45px;
+    width: 25px;
+    border: none;
+  }
+  @media only screen and (max-width: 700px) {
+    height: 40px;
+    width: 20px;
+  }
+`;
 export const Span2 = styled.div`
   position: absolute;
   display: block;
@@ -223,18 +265,21 @@ export const Span2 = styled.div`
   -moz-animation: ani-mouse 2.5s linear infinite;
   animation: ani-mouse 2.5s linear infinite;
   background-color: #ceb7ff;
-`; // inner
+`;
 export const EarthContainer = styled.div`
   position: fixed;
-  transform: translateY(80vh);
-  height: 50vh;
+  transform: translateY(70vh);
+  height: 100vh;
   width: 100%;
   background-color: transparent;
   display: flex;
   align-items: center;
   justify-content: center;
-  // padding-top: 30vh;
   z-index: 2;
+
+  @media screen and (max-width: 720px) {
+		transform: translateY(40vh);
+	}
 `;
 export const GlowyEarth = styled.div`
   border: 1px solid green;

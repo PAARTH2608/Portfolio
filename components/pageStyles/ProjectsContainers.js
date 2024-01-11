@@ -17,7 +17,7 @@ export const InformationContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   z-index: 999;
 `;
 export const ContentContainer = styled.div`
@@ -26,6 +26,13 @@ export const ContentContainer = styled.div`
   background-color: transparent;
   z-index: 5;
   padding: 2%;
+
+  @media only screen and (max-width: 1240px) {
+    width: 80%;
+  }
+  @media only screen and (max-width: 800px) {
+    width: 90%;
+  }
 `;
 export const ContactContainer = styled.div``;
 export const SocialContainer = styled.div`

@@ -21,7 +21,8 @@ export const InformationContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  padding-top: 4vh;
+  justify-content: flex-start;
   z-index: 999;
 `;
 export const SkillsContainer = styled.div`
@@ -50,6 +51,16 @@ export const Heading = styled.div`
       text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6,
         0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
     }
+  }
+
+  @media only screen and (max-width: 1340px) {
+    font-size: 1.7rem;
+  }
+  @media only screen and (max-width: 900px) {
+    font-size: 1.5rem;
+  }
+  @media only screen and (max-width: 600px) {
+    font-size: 1.3rem;
   }
 `;
 export const HelperDiv = styled.div`

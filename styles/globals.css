@@ -54,3 +54,56 @@ body {
   z-index: 9999;
   position: relative;
 }
+
+.icon {
+  font-size: 30px;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.introImg {
+  background-color: transparent;
+}
+
+.mainPage {
+  cursor: pointer;
+  background-color: transparent;
+}
+
+@media only screen and (max-width: 1920px) {
+  .icon {
+    font-size: 40px;
+  }
+}
+@media only screen and (max-width: 1540px) {
+  .icon {
+    font-size: 35px;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .icon {
+    font-size: 30px;
+  }
+  .introImg {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .mainPage {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .introImg {
+    width: 70%;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .icon {
+    font-size: 25px;
+  }
+}
+

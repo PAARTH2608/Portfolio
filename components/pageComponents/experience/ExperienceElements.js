@@ -13,21 +13,44 @@ const Container = styled.div`
   width: 100%;
   z-index: 3;
 `;
+const MainHead = styled.h2`
+  font-size: 2.6rem;
+  background-color: transparent;
+  fontfamily: "Bebas Neue", sans-serif;
 
-const HeadingContainer = styled.div`
-  width: 100%;
+  @media only screen and (max-width: 1040px) {
+    font-size: 2.3rem;
+  }
+  @media only screen and (max-width: 740px) {
+    font-size: 2rem;
+  }
+  @media only screen and (max-width: 740px) {
+    font-size: 1.6rem;
+  }
+
 `;
 const Heading = styled.h3`
   font-size: 1.8rem;
   background-color: transparent;
-  fontFamily: "Bebas Neue", sans-serif;
+  fontfamily: "Bebas Neue", sans-serif;
+
+  @media only screen and (max-width: 1040px) {
+    font-size: 1.5rem;
+  }
+  @media only screen and (max-width: 740px) {
+    font-size: 1.2rem;
+  }
+  @media only screen and (max-width: 740px) {
+    font-size: 1rem;
+  }
 `;
 const HelperDiv = styled.div`
   background-color: transparent;
   width: 100%;
-  display:flex;
+  display: flex;
   flex-direction: column;
   align-items: flex-start;
+  justify-content: center;
   padding: 0 10%;
 `;
 
@@ -43,7 +66,7 @@ const ExperienceElements = () => {
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    justifyContent: "space-around",
+    justifyContent: "center",
     backgroundColor: "rgba(255, 0, 0, 0)",
     fontFamily: "Bebas Neue",
     fontSize: "3rem",
@@ -58,8 +81,7 @@ const ExperienceElements = () => {
         {experience.map((exp) => (
           <SwiperSlide key={exp.id} style={styles1}>
             <HelperDiv>
-              {exp.title}
-              <br />
+              <MainHead>{exp.title}</MainHead>
               {/* <HeadingContainer></HeadingContainer> */}
               <Heading>{exp.date}</Heading>
             </HelperDiv>

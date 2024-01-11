@@ -28,30 +28,6 @@ export const overlayStyle = {
 const Main = (props) => {
   const styles = {
     backgroundColor: "transparent",
-
-    "@media (MaxWidth: 1280px)": {
-      width: "100%",
-      height: "100%",
-    },
-  };
-
-  const container = {
-    hidden: { opacity: 1, scale: 0 },
-    visible: {
-      opacity: 1,
-      scale: 1,
-      transition: {
-        delayChildren: 0.3,
-        staggerChildren: 0.2,
-      },
-    },
-  };
-  const item = {
-    hidden: { y: 20, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-    },
   };
 
   const styles1 = {
@@ -75,8 +51,7 @@ const Main = (props) => {
         alt="background"
         fill
         style={{
-          objectFit: "cover",
-          objectPosition: "center",
+          objectFit: "cover"
         }}
       />
       <div style={overlayStyle}></div>
@@ -85,8 +60,8 @@ const Main = (props) => {
           src={"/infoMainPage.svg"}
           height={250}
           width={700}
+          className="introImg"
           alt="mainbgimg"
-          style={styles}
         />
         <ClickOpenContainer>
           {toggle && (
@@ -123,7 +98,7 @@ const Main = (props) => {
                 alt="leftBorder"
                 height={400}
                 width={600}
-                style={styles2}
+                className="mainPage"
               />
             </motion.div>
           )}

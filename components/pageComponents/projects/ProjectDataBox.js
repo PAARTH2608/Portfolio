@@ -21,6 +21,13 @@ const Content = styled.p`
   font-size: 1.3rem;
   height: 60%;
   fontfamily: Montserrat, sans-serif;
+
+  @media only screen and (max-width: 1040px) {
+    font-size: 1.1rem;
+  }
+  @media only screen and (max-width: 740px) {
+    font-size: 1rem;
+  }
 `;
 const ProjectDataBox = (props) => {
   const styles = {

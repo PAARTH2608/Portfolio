@@ -17,6 +17,14 @@ const Content = styled.p`
   font-size: 1.3rem;
   height: 100%;
   fontFamily: Montserrat, sans-serif;
+
+  @media only screen and (max-width: 1040px) {
+    font-size: 1.5rem;
+  }
+
+  @media only screen and (max-width: 640px) {
+    font-size: 1rem;
+  }
 `;
 const ExperienceDataBox = (props) => {
 

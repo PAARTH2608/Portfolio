@@ -6,6 +6,15 @@ const Container = styled.div`
   grid-template-columns: 1fr 1fr 1fr 1fr;
   row-gap: 30px;
   column-gap: 10px;
+
+  @media only screen and (max-width: 1340px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  @media only screen and (max-width: 740px) {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 10px;
+    column-gap: 5px;
+  }
 `;
 const Skill = styled.div`
   display: flex;
@@ -20,6 +29,21 @@ const Skill = styled.div`
   color: #fff;
   font-size: 1.5rem;
   background-color: rgba(0, 0, 0, 0.3);
+
+  @media only screen and (max-width: 1340px) {
+    font-size: 1.3rem;
+    width: 15vw;
+  }
+  @media only screen and (max-width: 740px) {
+    width: 30vw;
+    height: 10vh;
+  }
+  // @media only screen and (max-width: 900px) {
+  //   font-size: 1.1rem;
+  // }
+  // @media only screen and (max-width: 600px) {
+  //   font-size: 0.9rem;
+  // }
 `;
 const SkillElements = () => {
   return (

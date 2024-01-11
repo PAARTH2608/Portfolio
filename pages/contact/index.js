@@ -23,7 +23,7 @@ const Contact = props => {
           objectPosition: "center",
         }}
       />
-      {/* <div style={overlayStyle}></div> */}
+      <div style={overlayStyle}></div>
       <InformationContainer>
         <Image
           src={"/contactInfo.svg"}
@@ -31,6 +31,7 @@ const Contact = props => {
           width={500}
           alt="mainbgimg"
           style={styles}
+          className="introImg"
         />
         <ContentContainer>
           <ContactElement />

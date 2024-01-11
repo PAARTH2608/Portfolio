@@ -14,6 +14,7 @@ const Socials = () => {
   const styl = {
     backgroundColor: "transparent",
   };
+
   return (
     <Container>
       <motion.div
@@ -29,9 +30,9 @@ const Socials = () => {
         <Link
           href={"https://github.com/PAARTH2608"}
           target="_blank"
-          style={styles}
+          style={styl}
         >
-          <BsGithub size={30} style={styles} />
+          <BsGithub style={styles} className="icon" />
         </Link>
       </motion.div>
       <motion.div
@@ -47,9 +48,9 @@ const Socials = () => {
         <Link
           href={"https://twitter.com/PAARTHJAIN7"}
           target="_blank"
-          style={styles}
+          style={styl}
         >
-          <BsTwitter size={30} style={styles} />
+          <BsTwitter style={styles} className="icon" />
         </Link>
       </motion.div>
       <motion.div
@@ -65,9 +66,9 @@ const Socials = () => {
         <Link
           href={"https://www.linkedin.com/in/paarth-jain-470522208/"}
           target="_blank"
-          style={styles}
+          style={styl}
         >
-          <SiLinkedin size={30} style={styles} />
+          <SiLinkedin style={styles} className="icon" />
         </Link>
       </motion.div>
       <motion.div
@@ -83,9 +84,9 @@ const Socials = () => {
         <Link
           href={"https://leetcode.com/PAARTH2608/"}
           target="_blank"
-          style={styles}
+          style={styl}
         >
-          <SiLeetcode size={30} style={styles} />
+          <SiLeetcode style={styles} className="icon" />
         </Link>
       </motion.div>
       <motion.div
@@ -101,12 +102,13 @@ const Socials = () => {
         <Link
           href={"mailto:jain.paarth2608@gmail.com"}
           target="_blank"
-          style={styles}
+          style={styl}
         >
-          <SiGmail size={30} style={styles} />
+          <SiGmail style={styles} className="icon" />
         </Link>
       </motion.div>
     </Container>
   );
 };
+
 export default Socials;

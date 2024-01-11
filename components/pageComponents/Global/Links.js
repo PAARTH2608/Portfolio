@@ -36,7 +36,7 @@ const Links = () => {
           style={styles}
           activeClass="active"
         >
-          <FaUserAstronaut size={30} style={styles} />
+          <FaUserAstronaut style={styles} className="icon" />
         </Link>
       </motion.div>
       <motion.div
@@ -58,7 +58,7 @@ const Links = () => {
           style={styles}
           activeClass="active"
         >
-          <GiSkills size={30} style={styles} />
+          <GiSkills style={styles} className="icon" />
         </Link>
       </motion.div>
       <motion.div
@@ -80,7 +80,7 @@ const Links = () => {
           style={styles}
           activeClass="active"
         >
-          <MdEngineering size={30} style={styles} />
+          <MdEngineering style={styles} className="icon" />
         </Link>
       </motion.div>
       <motion.div
@@ -102,7 +102,7 @@ const Links = () => {
           style={styles}
           activeClass="active"
         >
-          <FaProjectDiagram size={30} style={styles} />
+          <FaProjectDiagram style={styles} className="icon" />
         </Link>
       </motion.div>
       <motion.div
@@ -124,7 +124,7 @@ const Links = () => {
           style={styles}
           activeClass="active"
         >
-          <MdCastConnected size={30} style={styles} />
+          <MdCastConnected style={styles} className="icon" />
         </Link>
       </motion.div>
     </Container>
