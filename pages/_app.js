@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Analytics } from "@vercel/analytics/react";
 import { Suspense, useEffect, useState } from "react";
 import { AiOutlineArrowDown } from "react-icons/ai";
 import { SiBuymeacoffee } from "react-icons/si";
@@ -131,6 +132,7 @@ export default function App({ Component, pageProps }) {
           <Links />
         </LinksContainer>
         <Component {...pageProps} />
+        <Analytics />
       </Suspense>
     </>
   );
