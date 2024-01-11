@@ -132,7 +132,7 @@ export default function App({ Component, pageProps }) {
           <Links />
         </LinksContainer>
         <Component {...pageProps} />
-        <Analytics />
+        <Analytics mode={"production"} />
       </Suspense>
     </>
   );
