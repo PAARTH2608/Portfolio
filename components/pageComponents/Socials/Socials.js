@@ -1,9 +1,9 @@
 import { Container } from "./SocialsStyles";
 import { motion } from "framer-motion";
 import { BsGithub, BsTwitter } from "react-icons/bs";
-import { SiLinkedin, SiLeetcode } from "react-icons/si";
-import { SiGmail } from "react-icons/si";
+import { SiGmail, SiLinkedin, SiLeetcode, SiHashnode  } from "react-icons/si";
 import Link from "next/link";
+import { FaMediumM } from "react-icons/fa";
 
 const Socials = () => {
   const styles = {
@@ -69,6 +69,42 @@ const Socials = () => {
           style={styl}
         >
           <SiLinkedin style={styles} className="icon" />
+        </Link>
+      </motion.div>
+      <motion.div
+        initial={{ scale: 0 }}
+        animate={{ rotate: 360, scale: 1 }}
+        transition={{
+          type: "spring",
+          stiffness: 260,
+          damping: 20,
+        }}
+        style={styl}
+      >
+        <Link
+          href={"https://medium.com/@paarth.jain"}
+          target="_blank"
+          style={styl}
+        >
+          <FaMediumM style={styles} className="icon" />
+        </Link>
+      </motion.div>
+      <motion.div
+        initial={{ scale: 0 }}
+        animate={{ rotate: 360, scale: 1 }}
+        transition={{
+          type: "spring",
+          stiffness: 260,
+          damping: 20,
+        }}
+        style={styl}
+      >
+        <Link
+          href={"https://itspaarth7.hashnode.dev/"}
+          target="_blank"
+          style={styl}
+        >
+          <SiHashnode  style={styles} className="icon" />
         </Link>
       </motion.div>
       <motion.div

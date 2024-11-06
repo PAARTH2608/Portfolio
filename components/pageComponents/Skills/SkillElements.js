@@ -48,18 +48,18 @@ const Skill = styled.div`
 const SkillElements = () => {
   return (
     <Container>
+      <Skill>BACKEND ARCHITECTURES</Skill>
       <Skill>NEXT.JS</Skill>
-      <Skill>REACT.JS</Skill>
-      <Skill>EXPRESS.JS</Skill>
-      <Skill>JAVASCRIPT</Skill>
+      <Skill>MERN STACK</Skill>
+      <Skill>RUST</Skill>
       <Skill>JAVA - SPRINGBOOT</Skill>
       <Skill>DOCKER & KUBERNETES</Skill>
       <Skill>C++</Skill>
-      <Skill>PYTHON</Skill>
+      <Skill>PYTHON, DJANGO AND FASTAPI</Skill>
       <Skill>ARTIFICIAL NEURAL NETWORKS</Skill>
       <Skill>AWS</Skill>
       <Skill>DATA STRUCTURES & ALGORITHMS</Skill>
-      <Skill>SQL & NOSQL DB</Skill>
+      <Skill>DATABASES</Skill>
     </Container>
   );
 };

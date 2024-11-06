@@ -7,8 +7,6 @@ import Contact from "./contact";
 
 import styled from "styled-components";
 import { useRef } from "react";
-import { motion } from "framer-motion";
-import { useFollowPointer } from "../framer/useFollowPointer";
 
 const MainContainer = styled.div`
   display: flex;
@@ -21,21 +19,9 @@ const MainContainer = styled.div`
 
 const Home = () => {
   const ref = useRef(null);
-  // const { x, y } = useFollowPointer(ref);
 
   return (
     <MainContainer>
-      {/* <motion.div
-        ref={ref}
-        className="box"
-        animate={{ x, y }}
-        transition={{
-          type: "spring",
-          damping: 3,
-          stiffness: 100,
-          restDelta: 0.001,
-        }}
-      /> */}
       <Head>
         <title>Paarth Jain</title>
       </Head>

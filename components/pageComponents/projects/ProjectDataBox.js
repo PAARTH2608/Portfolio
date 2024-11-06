@@ -67,6 +67,7 @@ const ProjectDataBox = (props) => {
             key={st}
             style={{
               backgroundColor: "transparent",
+              color: "#CEB7FF",
             }}
           >
             {st},{" "}

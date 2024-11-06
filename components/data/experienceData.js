@@ -1,7 +1,7 @@
 export const experience = [
   {
     id: 1,
-    title: "Software Developer - UBS (Pune)",
+    title: "Software ENGINEER - UBS (Pune)",
     date: "JAN 2024 TO PRESENT",
     about:
       "Building scalable systems and oschestrating the backend services for optimizations and efficient data processing. Managing the microservices using docker and kubernetes. Developing scalable microservices in JAVA Springboot, JAVA MVC, JUnit Testing and more. Managing the backend pipelines for error free deployment and debugging.",
