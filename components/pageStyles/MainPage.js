@@ -112,6 +112,10 @@ export const PressEnterContainer = styled.div`
   justify-content: center;
   border-radius: 10px;
   z-index: 9999;
+
+  @media only screen and (max-width: 700px) {
+    bottom: 0px;
+  }
 `;
 export const ScrollButtonContainer = styled.button`
   height: 20vh;
