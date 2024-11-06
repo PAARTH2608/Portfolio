@@ -36,7 +36,8 @@ const Skill = styled.div`
   }
   @media only screen and (max-width: 740px) {
     width: 30vw;
-    height: 10vh;
+    height: 8vh;
+    font-size: 1rem;
   }
   // @media only screen and (max-width: 900px) {
   //   font-size: 1.1rem;
