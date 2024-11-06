@@ -104,7 +104,7 @@ export const PressEnterContainer = styled.div`
   background-color: transparent;
   position: fixed;
   left: 25px;
-  bottom: 50px;
+  bottom: 10px;
   padding: 1%;
   display: flex;
   flex-direction: column;
