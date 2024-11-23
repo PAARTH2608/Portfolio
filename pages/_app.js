@@ -136,7 +136,7 @@ export default function App({ Component, pageProps }) {
           {visible && <Earth />}
           </EarthContainer>
         <Link
-          href="https://drive.google.com/file/d/1sp-QC8vf_4RsPwjrJKfC5B29lw-ZYH2R/view?usp=sharing"
+          href="https://drive.google.com/file/d/1LLG4iAQpc-Z0ZIv1ub8tI-HMopPZq8m9/view?usp=sharing"
           passHref
           target="_blank"
         >
