@@ -1,20 +1,10 @@
 import { useState } from "react";
-import Head from "next/head";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import Link from "next/link";
-import { AiOutlineArrowDown } from "react-icons/ai";
 import {
   Container,
-  ContactMeContainer,
-  HelperDiv,
   InformationContainer,
   ClickOpenContainer,
-  PressEnterContainer,
-  ScrollHeading,
-  Button,
-  Span1,
-  ScrollButtonContainer,
 } from "../../components/pageStyles/MainPage";
 
 export const overlayStyle = {
@@ -33,10 +23,6 @@ const Main = (props) => {
   const styles1 = {
     backgroundColor: "transparent",
     width: "85%",
-    cursor: "pointer",
-  };
-  const styles2 = {
-    backgroundColor: "transparent",
     cursor: "pointer",
   };
 

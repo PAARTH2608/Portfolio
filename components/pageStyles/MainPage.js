@@ -98,6 +98,27 @@ export const LinksContainer = styled.div`
   background-color: transparent;
   z-index: 99999;
 `;
+export const VisitCountContainer = styled.div`
+  position: fixed;
+  right: 5%;
+  bottom: 5%;
+  color: white;
+  z-index: 99999;
+  height: 7vh;
+  width: fit;
+  padding: 2vh;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ceb7ff;
+  border: 3px solid #ceb7ff;
+  border-radius: 23px;
+
+  @media only screen and (max-width: 700px) {
+    border: none
+  }
+`;
 export const PressEnterContainer = styled.div`
   height: 20vh;
   width: 8%;

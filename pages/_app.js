@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Analytics } from "@vercel/analytics/react";
 import { Suspense, useEffect, useState } from "react";
 import { AiOutlineArrowDown } from "react-icons/ai";
-import { SiBuymeacoffee } from "react-icons/si";
+import { MdEmojiEmotions } from "react-icons/md";
 import Earth from "../components/Earth/Earth";
 import Socials from "../components/pageComponents/Socials/Socials";
 import PageLoader from "../components/PageLoader";
@@ -18,6 +18,7 @@ import {
   SocialContainer,
   Span1,
   Text,
+  VisitCountContainer,
 } from "../components/pageStyles/MainPage";
 import Links from "../components/pageComponents/Global/Links";
 import "../styles/globals.css";
@@ -25,6 +26,8 @@ import Image from "next/image";
 
 export default function App({ Component, pageProps }) {
   const [visible, setIsVisible] = useState(true);
+  const [visitCount, setVisitCount] = useState(0);
+  console.log(visitCount);
 
   const [showModal, setShowModal] = useState(false);
 
@@ -52,6 +55,23 @@ export default function App({ Component, pageProps }) {
     window.addEventListener("scroll", listenToScroll);
     return () => window.removeEventListener("scroll", listenToScroll);
   }, [visible]);
+
+  useEffect(() => {
+    const fetchVisitCount = async () => {
+      try {
+        const response = await fetch("/api/visit_count");
+        const data = await response.json();
+        setVisitCount(data.count);
+        await fetch("/api/visit_count", {
+          method: "POST",
+        });
+      } catch (error) {
+        console.error("Failed to fetch visit count:", error);
+      }
+    };
+
+    fetchVisitCount();
+  }, []);
 
   const arrowStyle = {
     position: "absolute",
@@ -92,11 +112,7 @@ export default function App({ Component, pageProps }) {
         <HelperDiv>
           <ContactMeContainer>
             <motion.div whileHover={{ scale: 1.2 }}>
-              <Text
-                onClick={handleBuyCoffeeClick}
-              >
-                Buy Me A Coffee
-              </Text>
+              <Text onClick={handleBuyCoffeeClick}>Buy Me A Coffee</Text>
             </motion.div>
           </ContactMeContainer>
         </HelperDiv>
@@ -132,9 +148,7 @@ export default function App({ Component, pageProps }) {
         <SocialContainer>
           <Socials />
         </SocialContainer>
-        <EarthContainer>
-          {visible && <Earth />}
-          </EarthContainer>
+        <EarthContainer>{visible && <Earth />}</EarthContainer>
         <Link
           href="https://drive.google.com/file/d/1LLG4iAQpc-Z0ZIv1ub8tI-HMopPZq8m9/view?usp=sharing"
           passHref
@@ -152,6 +166,12 @@ export default function App({ Component, pageProps }) {
         <LinksContainer>
           <Links />
         </LinksContainer>
+        <VisitCountContainer>
+          <MdEmojiEmotions size={"30px"} style={{
+            color: "#ceb7ff",
+            background: "transparent"
+          }} />: {visitCount}
+        </VisitCountContainer>
         <Component {...pageProps} />
         <Analytics mode={"production"} />
       </Suspense>

@@ -1,15 +1,8 @@
 import Image from "next/image";
-import { AiOutlineArrowDown } from "react-icons/ai";
 import SkillElements from "../../components/pageComponents/Skills/SkillElements";
 import {
   Container,
   InformationContainer,
-  ContactMeContainer,
-  ScrollButtonContainer,
-  HelperDiv,
-  ScrollHeading,
-  Button,
-  Span1,
   Heading,
   SkillsContainer,
 } from "../../components/pageStyles/SkillsPage";
