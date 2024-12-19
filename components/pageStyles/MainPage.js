@@ -138,27 +138,6 @@ export const PressEnterContainer = styled.div`
     bottom: 0px;
   }
 `;
-export const ScrollButtonContainer = styled.button`
-  height: 20vh;
-  width: 8%;
-  background-color: transparent;
-  border: 1px solid #ceb7ff;
-  position: fixed;
-  right: ${(props) => (props.left ? "50px" : "unset")};
-  left: ${(props) => (props.left ? "unset" : "50px")};
-  bottom: 50px;
-  padding: 1%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  border-radius: 10px;
-  text-align: center;
-  &:hover {
-    cursor: pointer;
-  }
-  z-index: 999999;
-`;
 
 export const ScrollHeading = styled.div`
   font-family: "Bebas Neue";

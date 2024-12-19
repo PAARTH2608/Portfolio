@@ -38,13 +38,6 @@ body {
 .swiper-button-prev::after {
   display: none;
 }
-#stars {
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  z-index: 4;
-}
 
 .box {
   width: 15px;

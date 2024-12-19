@@ -4,18 +4,7 @@ import {
   InformationContainer,
   ContentContainer,
 } from "../../components/pageStyles/ProjectsContainers";
-import {
-  HelperDiv,
-  ContactMeContainer,
-  ScrollButtonContainer,
-  ScrollHeading,
-  Button,
-  Span1,
-} from "../../components/pageStyles/MainPage";
 import ExperienceElements from "../../components/pageComponents/experience/ExperienceElements";
-import { AiOutlineArrowDown } from "react-icons/ai";
-import Head from "next/head";
-import Link from "next/link";
 import { overlayStyle } from "../main";
 
 const Experience = props => {
