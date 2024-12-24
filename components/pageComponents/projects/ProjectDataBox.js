@@ -50,9 +50,9 @@ const ProjectDataBox = (props) => {
   return (
     <Container>
       <LinkDiv>
-        <Link href={props.link} style={linkStyles} target="_blank">
+        {props.link && <Link href={props.link} style={linkStyles} target="_blank">
           <BsGithub size={30} style={styles} />
-        </Link>
+        </Link>}
         {props.deployment && (
           <Link href={props.deployment} style={linkStyles} target="_blank">
             <FaLink size={30} style={styles} />
@@ -62,7 +62,7 @@ const ProjectDataBox = (props) => {
       <Content>{props.content}</Content>
       <Content>
         TECH STACK :{" "}
-        {props.tech.map((st) => (
+        {props.tech.map((st, index) => (
           <span
             key={st}
             style={{
@@ -70,7 +70,7 @@ const ProjectDataBox = (props) => {
               color: "#CEB7FF",
             }}
           >
-            {st},{" "}
+            {st}{index < props.tech.length - 1 ? ", " : ""}
           </span>
         ))}
       </Content>
