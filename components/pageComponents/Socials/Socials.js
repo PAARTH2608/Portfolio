@@ -118,7 +118,7 @@ const Socials = () => {
         style={styl}
       >
         <Link
-          href={"https://leetcode.com/PAARTH2608/"}
+          href={"https://leetcode.com/u/its-paarth7/"}
           target="_blank"
           style={styl}
         >
