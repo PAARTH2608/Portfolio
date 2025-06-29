@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import {
   Container,
   InformationContainer,
@@ -54,7 +54,7 @@ const Main = (props) => {
             <motion.div
               initial={{ scale: 1 }}
               animate={{ scale: toggle ? 1 : 0 }}
-              transition={{ duration: 5 }}
+              transition={{ duration: 0.3 }}
               onClick={openHandler}
               style={{
                 backgroundColor: "transparent",
@@ -69,25 +69,28 @@ const Main = (props) => {
               />
             </motion.div>
           )}
-          {!toggle && (
-            <motion.div
-              initial={{ scale: 0 }}
-              animate={{ scale: toggle ? 0 : 1 }}
-              transition={{ duration: 0.3 }}
-              onClick={openHandler}
-              style={{
-                backgroundColor: "transparent",
-              }}
-            >
-              <Image
-                src={"/mainpageinfo.svg"}
-                alt="leftBorder"
-                height={400}
-                width={600}
-                className="mainPage"
-              />
-            </motion.div>
-          )}
+          <AnimatePresence>
+            {!toggle && (
+              <motion.div
+                initial={{ scale: 0 }}
+                animate={{ scale: 1 }}
+                exit={{ scale: 0 }}
+                transition={{ duration: 0.3 }}
+                onClick={openHandler}
+                style={{
+                  backgroundColor: "transparent",
+                }}
+              >
+                <Image
+                  src="/mainpageinfo.svg"
+                  alt="mainpageinfo"
+                  height={400}
+                  width={600}
+                  className="mainPage"
+                />
+              </motion.div>
+            )}
+          </AnimatePresence>
         </ClickOpenContainer>
       </InformationContainer>
     </Container>

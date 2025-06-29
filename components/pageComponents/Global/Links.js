@@ -15,118 +15,47 @@ const Links = () => {
   const styl = {
     backgroundColor: "transparent",
   };
+  
+  const linkConfigs = [
+    { to: "page1", icon: FaUserAstronaut, label: "About" },
+    { to: "page2", icon: GiSkills, label: "Skills" },
+    { to: "page3", icon: MdEngineering, label: "Experience" },
+    { to: "page4", icon: FaProjectDiagram, label: "Projects" },
+    { to: "page5", icon: MdCastConnected, label: "Contact" },
+  ];
+
   return (
     <Container>
-      <motion.div
-        initial={{ scale: 0 }}
-        animate={{ rotate: 360, scale: 1 }}
-        transition={{
-          type: "spring",
-          stiffness: 260,
-          damping: 20,
-        }}
-        style={styl}
-      >
-        <Link
-          to={"page1"}
-          spy={true}
-          smooth={true}
-          offset={0}
-          duration={500}
-          style={styles}
-          activeClass="active"
-        >
-          <FaUserAstronaut style={styles} className="icon" />
-        </Link>
-      </motion.div>
-      <motion.div
-        initial={{ scale: 0 }}
-        animate={{ rotate: 360, scale: 1 }}
-        transition={{
-          type: "spring",
-          stiffness: 260,
-          damping: 20,
-        }}
-        style={styl}
-      >
-        <Link
-          to={"page2"}
-          spy={true}
-          smooth={true}
-          offset={0}
-          duration={500}
-          style={styles}
-          activeClass="active"
-        >
-          <GiSkills style={styles} className="icon" />
-        </Link>
-      </motion.div>
-      <motion.div
-        initial={{ scale: 0 }}
-        animate={{ rotate: 360, scale: 1 }}
-        transition={{
-          type: "spring",
-          stiffness: 260,
-          damping: 20,
-        }}
-        style={styl}
-      >
-        <Link
-          to={"page3"}
-          spy={true}
-          smooth={true}
-          offset={0}
-          duration={500}
-          style={styles}
-          activeClass="active"
-        >
-          <MdEngineering style={styles} className="icon" />
-        </Link>
-      </motion.div>
-      <motion.div
-        initial={{ scale: 0 }}
-        animate={{ rotate: 360, scale: 1 }}
-        transition={{
-          type: "spring",
-          stiffness: 260,
-          damping: 20,
-        }}
-        style={styl}
-      >
-        <Link
-          to={"page4"}
-          spy={true}
-          smooth={true}
-          offset={0}
-          duration={500}
-          style={styles}
-          activeClass="active"
-        >
-          <FaProjectDiagram style={styles} className="icon" />
-        </Link>
-      </motion.div>
-      <motion.div
-        initial={{ scale: 0 }}
-        animate={{ rotate: 360, scale: 1 }}
-        transition={{
-          type: "spring",
-          stiffness: 260,
-          damping: 20,
-        }}
-        style={styl}
-      >
-        <Link
-          to={"page5"}
-          spy={true}
-          smooth={true}
-          offset={0}
-          duration={500}
-          style={styles}
-          activeClass="active"
-        >
-          <MdCastConnected style={styles} className="icon" />
-        </Link>
-      </motion.div>
+      {linkConfigs.map((config, index) => {
+        const IconComponent = config.icon;
+        return (
+          <motion.div
+            key={config.to}
+            initial={{ scale: 0 }}
+            animate={{ rotate: 360, scale: 1 }}
+            transition={{
+              type: "spring",
+              stiffness: 260,
+              damping: 20,
+              delay: index * 0.1,
+            }}
+            style={styl}
+          >
+            <Link
+              to={config.to}
+              spy={true}
+              smooth={true}
+              offset={0}
+              duration={500}
+              style={styles}
+              activeClass="active"
+              spyThrottle={500}
+            >
+              <IconComponent style={styles} className="icon" />
+            </Link>
+          </motion.div>
+        );
+      })}
     </Container>
   );
 };

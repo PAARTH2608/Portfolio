@@ -52,6 +52,23 @@ body {
   font-size: 30px;
   cursor: pointer;
   background-color: transparent;
+  transition: all 0.3s ease;
+}
+
+/* Active link styling */
+.active .icon {
+  color: #ffffff !important;
+  background: rgba(206, 183, 255, 0.2);
+  border-radius: 50%;
+  padding: 8px;
+  box-shadow: 0 0 15px rgba(206, 183, 255, 0.5);
+  transform: scale(1.1);
+}
+
+/* Hover effect for non-active links */
+.icon:hover {
+  color: #ffffff !important;
+  transform: scale(1.05);
 }
 
 .introImg {
@@ -67,15 +84,24 @@ body {
   .icon {
     font-size: 40px;
   }
+  .active .icon {
+    padding: 8px;
+  }
 }
 @media only screen and (max-width: 1540px) {
   .icon {
     font-size: 35px;
   }
+  .active .icon {
+    padding:6px;
+  }
 }
 @media only screen and (max-width: 1200px) {
   .icon {
     font-size: 30px;
+  }
+  .active .icon {
+    padding: 8px;
   }
   .introImg {
     width: 50%;
@@ -97,6 +123,9 @@ body {
 @media only screen and (max-width: 700px) {
   .icon {
     font-size: 25px;
+  }
+  .active .icon {
+    padding: 6px;
   }
 }
 
