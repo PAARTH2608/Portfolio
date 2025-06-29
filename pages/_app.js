@@ -46,7 +46,7 @@ export default function App({ Component, pageProps }) {
         document.body.scrollTop || document.documentElement.scrollTop;
 
       if (winScroll > heightToHideFrom) {
-        visible && // to limit setting state only the first time
+        visible &&
           setIsVisible(false);
       } else {
         setIsVisible(true);
@@ -148,7 +148,7 @@ export default function App({ Component, pageProps }) {
         <SocialContainer>
           <Socials />
         </SocialContainer>
-        <EarthContainer>{visible && <Earth />}</EarthContainer>
+        {visible && <EarthContainer><Earth /></EarthContainer>}
         <Link
           href="https://drive.google.com/file/d/1LLG4iAQpc-Z0ZIv1ub8tI-HMopPZq8m9/view?usp=sharing"
           passHref
