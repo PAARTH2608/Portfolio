@@ -52,7 +52,7 @@ const ProjectElements = () => {
   return (
     <Container>
       <Swiper navigation={true} modules={[Navigation]} style={styles}>
-        {projects.map((project) => (
+        {[...projects].reverse().map((project) => (
           <SwiperSlide key={project.id} style={styles1}>
             <HeadingDiv>{project.title}</HeadingDiv>
             <ProjectDataBox
